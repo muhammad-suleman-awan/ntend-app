@@ -1,15 +1,16 @@
+import { Button, TextField } from "@mui/material";
 import React from "react";
 
 const Login = () => {
   return (
     <div className="App">
     <form className="form">
-      <CustomInput
+      <TextField
         labelText="Email"
         id="email" 
         type="text"
       />
-      <CustomInput
+      <TextField
         labelText="Password"
         id="password" 
         type="password"
