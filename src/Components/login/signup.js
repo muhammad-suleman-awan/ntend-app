@@ -44,7 +44,7 @@ const Signup = () => {
             style={{ backgroundColor: applicationColor.red }}
             className="rounded-md w-9/12"
           ></input>
-            <span className="w-2/5 flex w-9/12 py-2 text-black text-lg font-semibold">
+          <span className="w-2/5 flex w-9/12 py-2 text-black text-lg font-semibold">
             Email
           </span>
           <input
