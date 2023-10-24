@@ -12,7 +12,7 @@ const DrawerBoard = () => {
           <div id="log" className="flex justify-center gap-5">
             <Avatar alt="Remy Sharp" src={pic} />
             <span
-              className="text-blue-600 text-3xl font-bold pb-5"
+              className="text-blue-600 text-2xl font-bold pb-5"
               style={{ fontFamily: "cursive" }}
             >
               NTEND INFO
@@ -45,7 +45,7 @@ const DrawerBoard = () => {
         </div>
       </div>
       <div className="bg-[#737373]">
-        <BodyDashBoard></BodyDashBoard>
+        <BodyDashBoard> </BodyDashBoard>
       </div>
     </div>
   );
