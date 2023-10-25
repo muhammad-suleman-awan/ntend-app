@@ -1,17 +1,12 @@
 import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import Pagination from '@mui/material/Pagination';
+import Pagination from "@mui/material/Pagination";
 
 const columns = [
-  { field: "id", headerName: "ID", width: 70 },
-  { field: "firstName", headerName: "First name", width: 130 },
+  { field: "id", headerName: "ID", width: 270 },
+  { field: "firstName", headerName: "First name", width: 230 },
   { field: "lastName", headerName: "Last name", width: 130 },
-  {
-    field: "age",
-    headerName: "Age",
-    type: "number",
-    width: 90,
-  },
+  { field: "age",headerName: "Age",type: "number",width: 90,},
   {
     field: "fullName",
     headerName: "Full name",
@@ -33,24 +28,30 @@ const rows = [
   { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
   { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
   { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
+
+  { id: 10, lastName: "Clifford", firstName: "Ferrara", age: 44 },
+  { id: 11, lastName: "Frances", firstName: "Rossini", age: 36 },
+  { id: 12, lastName: "Roxie", firstName: "Harvey", age: 65 },
 ];
 
 export default function RecordTabledashboard() {
   return (
     <div className="flex justify-center mt-3">
-      <div style={{ height: 400, width: "90%" }} className="bg-white"  > 
+      <div style={{ height: 400, width: "90%" }} className="bg-white">
         <DataGrid
           rows={rows}
           columns={columns}
           initialState={{
-            pagination: 
-               {count:10 ,shape:"rounded"},
-              
-        
+            pagination: { count: 10, shape: "rounded" },
           }}
-          checkboxSelection
-        /> 
+          slots={{
+        // Hide `columnMenuColumnsItem`
+        columnMenuColumnsItem: null,
+        columnMenuSortItem:null, 
 
+      }}
+    disableColumnMenu={true}
+         />
       </div>
     </div>
   );
