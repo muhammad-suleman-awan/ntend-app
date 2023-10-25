@@ -54,12 +54,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Mycontact() {
   return (
-    <div className="bg-red-300 " >
- <Search sx={{width:"max-content", display:"flex" , justifyContent:"end"}} >
+    <div className=" flex justify-end pr-5 pt-5" >
+ <Search sx={{width:"500px", display:"flex" , justifyContent:"end"}} >
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
       <StyledInputBase
+      className="flex"
         placeholder="Search…"
         inputProps={{ "aria-label": "search" }}
       />

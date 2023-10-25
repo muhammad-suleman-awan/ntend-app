@@ -2,6 +2,7 @@ import React from "react";
 import DrawerBoard from "../dashboard/Drawer_bashboard";
 import HeaderIcon from "../dashboard/headerIcon";
 import Mycontact from "./headermidle";
+import RecordTabledashboard from "./recordTable";
 
 const Screen2Index = () => {
   return (
@@ -16,9 +17,11 @@ const Screen2Index = () => {
         <div className="bg-white mt-1 h-20 flex justify-start pt-5 pl-5 mb-1">
           <span className="text-3xl font-bold	">My Contacts</span>
         </div>
-        <div>
-            <Mycontact></Mycontact>
+        <div className="h-12">
+            <Mycontact ></Mycontact>
+            <RecordTabledashboard></RecordTabledashboard>
         </div>
+
       </div>
     </div>
   );
