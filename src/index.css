@@ -9,3 +9,8 @@
     border:1px dashed gray;
     text-decoration: underline;
 } */
+
+.btnstylescreen3 .css-1foa3kv-MuiFormLabel-root-MuiInputLabel-root{
+    display: flex;
+    justify-content: start;
+}

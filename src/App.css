@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.tableContacts {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tableContacts .css-t89xny-MuiDataGrid-columnHeaderTitle {
+  font-weight: bold;
+}
+
+.tableOverflow .css-qvtrhg-MuiDataGrid-virtualScroller {
+  overflow: hidden;
+}
+.detailBttn .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  color:black;
+}
