@@ -14,7 +14,7 @@ const Screen3Index = () => {
           <HeaderIcon></HeaderIcon>
         </div>
         <div className="bg-white mt-1 h-20 flex justify-start pt-5 pl-5 mb-1">
-          <span className="text-3xl font-bold	">Add Contacts</span>
+          <span className="text-3xl font-bold	">Add Contracts</span>
         </div>
         <div id="addContractsinfo">
             <div>

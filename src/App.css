@@ -52,3 +52,7 @@
 .detailBttn .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
   color:black;
 }
+
+.bckGroundCOlor .div:where(.swal2-container) h2:where(.swal2-title) {
+  padding: 0px;
+}
