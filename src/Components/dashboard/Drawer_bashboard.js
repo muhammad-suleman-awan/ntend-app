@@ -1,8 +1,9 @@
 import { Avatar, Button, IconButton } from "@mui/material";
 import React from "react";
-import pic from '../pic.jpg';  
-import MenuIcon from '@mui/icons-material/Menu';
+import pic from "../pic.jpg";
+import MenuIcon from "@mui/icons-material/Menu";
 import BodyDashBoard from "./Body_DashBoard";
+import AvatarPic from "./Avatar";
 
 const DrawerBoard = () => {
   return (
@@ -16,32 +17,13 @@ const DrawerBoard = () => {
               style={{ fontFamily: "cursive" }}
             >
               NTEND INFO
-            </span> 
-            <IconButton
-
-
-            size="large"
-            edge="start"
-            color="inherit" 
-          > 
-          <MenuIcon>L</MenuIcon>
-          </IconButton>
-          </div>
-
-          <div className="flex justify-center flex-col  ">
-            <Avatar
-              className=" self-center"
-              alt="Remy Sharp"
-              src={pic}
-              sx={{ width: 100, height: 100 }}
-            />
-            <span className="text-black-600 text-sm font-bold pt-3  	">
-              Suleman
             </span>
-            <span className="text-black-600 text-lg   	">
-              mmsuleman@gmail.com
-            </span>
+            <IconButton size="large" edge="start" color="inherit">
+              <MenuIcon >  </MenuIcon>
+            </IconButton>
           </div>
+        <AvatarPic name={"Suleman"} email={"mmsulemanawan@gmail.com"} ></AvatarPic>
+          
         </div>
       </div>
       <div className="bg-[#737373]">

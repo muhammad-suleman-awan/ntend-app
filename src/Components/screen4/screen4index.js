@@ -21,7 +21,7 @@ const CategoryScreenIndex = () => {
           <span className="text-3xl font-bold	">Category</span>
           <Button
             variant="contained"
-            className="p-0 mr-10 h-7 w-28"
+            className="p-0 mr-10 h-7 w-38"
             sx={{ color: "black" }}
             onClick={async () => {
               const { value: email } = await Swal.fire({
@@ -34,7 +34,7 @@ const CategoryScreenIndex = () => {
                 inputPlaceholder: "",
                 confirmButtonText: "Publish",
                 customClass: {
-                  title: "text-start border-b-2 border-black",
+                  title: "text-start border-b-2 border-black p-0 pl-5",
                   input: "text-start border-0 bg-[#dedede] p-2 m-0", // Apply Tailwind classes to style the input
                 },
               });
