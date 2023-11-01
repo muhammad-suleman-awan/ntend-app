@@ -6,22 +6,13 @@ import RecordTabledashboard from "./recordTable";
 
 const Screen2Index = () => {
   return (
-    <div className="h-screen grid grid-cols-12">
-      <div className="col-span-2 h-screen bg-[#737373]">
-        <DrawerBoard></DrawerBoard>
+    <div className="col-span-10   bg-[#dedede] ">
+      <div className="bg-white mt-1 h-20 flex justify-start pt-5 pl-5 mb-1">
+        <span className="text-3xl font-bold	">My Contacts</span>
       </div>
-      <div className="col-span-10 h-screen bg-[#dedede] ">
-        <div className="flex justify-end pr-5 h-16 place-content-center bg-white 	pt-5	">
-          <HeaderIcon></HeaderIcon>
-        </div>
-        <div className="bg-white mt-1 h-20 flex justify-start pt-5 pl-5 mb-1">
-          <span className="text-3xl font-bold	">My Contacts</span>
-        </div>
-        <div className="h-12">
-            <Mycontact ></Mycontact>
-            <RecordTabledashboard></RecordTabledashboard>
-        </div>
-
+      <div className="h-12">
+        <Mycontact></Mycontact>
+        <RecordTabledashboard></RecordTabledashboard>
       </div>
     </div>
   );

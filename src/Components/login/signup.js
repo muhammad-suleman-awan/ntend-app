@@ -2,8 +2,12 @@ import { Avatar, Button } from "@mui/material";
 import React from "react";
 import pic from "../pic.jpg";
 import { applicationColor } from "../../Constants/color";
+import { useNavigate } from "react-router-dom";
+
 
 const Signup = () => {
+  const goto = useNavigate();
+  const gotoSignUp = useNavigate();
   return (
     <div
       style={{ backgroundColor: applicationColor.red }}
@@ -70,10 +74,16 @@ const Signup = () => {
           style={{ color: applicationColor.red }}
           className="flex flex-col justify-center items-center py-3"
         >
-          <Button variant="contained" className="w-5/12 rounded-4xl	">
-            <span className=" font-light">Sign up</span>
+          <Button variant="contained" className="w-5/12 rounded-4xl	"
+           onClick={()=>gotoSignUp("/dashboard ")}
+
+          >
+            <span className=" font-light">Signin</span>
           </Button>
-          <Button variant="text" className="w-3/12 mt-5">
+          <Button variant="text" className="w-3/12 mt-5 pt-2 border-2 border-red-500"
+           onClick={() => goto("/gotoSignUp")}
+
+          >
             <span className="font-light">Signup</span>
           </Button>
         </div>
