@@ -32,7 +32,7 @@ const Signup = () => {
               src={pic}
               sx={{ width: 100, height: 100 }}
             />
-            <span className="text-blue-600 text-sm font-bold  	">
+            <span className="text-blue-600 text-sm font-bold flex justify-center 	">
               Profile Picture
             </span>
           </div>

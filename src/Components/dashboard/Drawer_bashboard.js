@@ -4,8 +4,10 @@ import pic from "../pic.jpg";
 import MenuIcon from "@mui/icons-material/Menu";
 import BodyDashBoard from "./Body_DashBoard";
 import AvatarPic from "./Avatar";
+import { useNavigate } from "react-router-dom";
 
 const DrawerBoard = () => {
+  const profile = useNavigate();
   return (
     <div>
       <div>
@@ -18,7 +20,9 @@ const DrawerBoard = () => {
             >
               NTEND INFO
             </span>
-            <IconButton size="large" edge="start" color="inherit">
+            <IconButton size="large" edge="start" color="inherit"
+            onClick={()=>profile("/dashboard/profile")}
+            >
               <MenuIcon >  </MenuIcon>
             </IconButton>
           </div>

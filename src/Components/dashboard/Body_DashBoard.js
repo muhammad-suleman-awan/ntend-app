@@ -6,8 +6,12 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import { useNavigate } from "react-router-dom";
 
 const BodyDashBoard = () => {
-const navigate = useNavigate()
-  const goto = useNavigate();
+const navigate = useNavigate();
+  const Contract = useNavigate();
+  const addContract = useNavigate();
+  const Categories = useNavigate();
+  const AllContracts =useNavigate();
+  const logout = useNavigate();
   const buttons = [
   
     <Button
@@ -15,6 +19,7 @@ const navigate = useNavigate()
       key="one"
       className=" gap-5"
       sx={{ display: "flex", justifyContent: "flex-start", background: "white" }}
+      onClick={()=>navigate("/dashboard/dashborady1")}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       Dashboard
@@ -24,16 +29,17 @@ const navigate = useNavigate()
       sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5 flex justify-start"
       variant="text"
-      onClick={()=>goto('/logoutpage')}
+      onClick={()=>Contract('/dashboard/Contract')}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      Add Contracts
+      MY Contracts
     </Button>,
     <Button
       key="three"
       sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5 flex justify-start"
       variant="text"
+      onClick={()=>addContract('/dashboard/addContract')}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       Add Contract
@@ -43,6 +49,7 @@ const navigate = useNavigate()
       sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5"
       variant="text"
+      onClick={()=>Categories('/dashboard/Categories')}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       Categories
@@ -52,6 +59,7 @@ const navigate = useNavigate()
       sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5"
       variant="text"
+      onClick={()=>AllContracts('/dashboard/AllContracts')}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       All Contracts
@@ -61,8 +69,8 @@ const navigate = useNavigate()
       sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5"
       variant="text"
-      onClick={() => goto("/logoutpage")}
-    >
+      onClick={()=>{logout('/logout')}}
+     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       Logout
     </Button>

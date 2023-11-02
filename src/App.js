@@ -23,28 +23,31 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/app" element={<AppWrapper />}>
-          <Route path="/app/dashboard" element={<DashboardIndex />}></Route>
-          <Route path="/app/profile" element={<ProfileIndex />}></Route>
-          <Route path="/app/Screen2Index" element={<Screen2Index />}></Route>
-          <Route path="/app/Screen3Index" element={<Screen3Index />}></Route>
-          <Route path="/app/CategoryScreenIndex" element={<CategoryScreenIndex />}></Route>
-          <Route path="/app/IndexScreen5" element={<IndexScreen5 />}></Route>
-          <Route path="/app/Screen6Index" element={<Screen6Index />}></Route>
-
-
-
+        <Route path="/dashboard" element={<AppWrapper />}>
+          <Route
+            path="/dashboard/dashborady1"
+            element={<CardBodyMainDashBorad />}
+          ></Route>
+          <Route
+            path="/dashboard/Contract"
+            element={<Screen2Index></Screen2Index>}
+          ></Route>
+          <Route path="/dashboard/addContract" element={<Screen3Index />} />
+          <Route
+            path="/dashboard/Categories"
+            element={<CategoryScreenIndex />}
+          />
+          <Route path="/dashboard/AllContracts" element={<IndexScreen5 />} />
+          <Route path="/dashboard/profile" element={<Screen6Index />} />          
+          <Route path="/dashboard/profileset" element={<ProfileIndex />} />
         </Route>
         <Route index element={<StartUpLogin />} />
-        <Route path="/signUpPage" element={<Signup />}></Route>
-        <Route path="/logoutpage" element={<StartUpLogin />}></Route>
-        <Route
-          path="/gotoSignUp"
-          element={<StartUpLogin></StartUpLogin>}
-        ></Route>
-        <Route path="/dashboard" element={<DashboardIndex />}></Route>
+        <Route path="/logout" element={<StartUpLogin />} />
+        <Route path="/signUpPage" element={<Signup />} />
+        <Route path="/gotoSignUp" element={<StartUpLogin />} /> 
 
-        {/* <Route path="/DashboardBodymain"  element={ <CardBodyMainDashBorad></CardBodyMainDashBorad>}></Route> */}
+
+        {/* <Route path="/dashboard" element={<DashboardIndex />}></Route> */}
       </Routes>
     </Router>
   );
