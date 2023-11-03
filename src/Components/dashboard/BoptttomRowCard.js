@@ -15,9 +15,9 @@ const BoptttomRowCard = () => {
       {" "}
       <div className="  grid grid-cols-3 px-5 py-5 gap-5">
         {dataPrintBottom.map((bodyData) => (
-          <div className="bg-[#c56bcd] rounded-lg flex flex-col gap-5 pt-5 pb-5">
-            <h1>{bodyData.title}</h1>
-            <h1>{bodyData.body}</h1>
+          <div className="bg-[#c56bcd] rounded-lg flex flex-col gap-5 pt-5 pb-5 justify-center">
+            <h1 className="flex justify-center">{bodyData.title}</h1>
+            <h1 className="flex justify-center">{bodyData.body}</h1>
           </div>
         ))}
       </div>

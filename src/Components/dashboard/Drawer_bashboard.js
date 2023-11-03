@@ -1,5 +1,5 @@
 import { Avatar, Button, IconButton } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import pic from "../pic.jpg";
 import MenuIcon from "@mui/icons-material/Menu";
 import BodyDashBoard from "./Body_DashBoard";
@@ -7,7 +7,6 @@ import AvatarPic from "./Avatar";
 import { useNavigate } from "react-router-dom";
 
 const DrawerBoard = () => {
-  const profile = useNavigate();
   return (
     <div>
       <div>
@@ -20,14 +19,14 @@ const DrawerBoard = () => {
             >
               NTEND INFO
             </span>
-            <IconButton size="large" edge="start" color="inherit"
-            onClick={()=>profile("/dashboard/profile")}
-            >
-              <MenuIcon >  </MenuIcon>
+            <IconButton size="large" edge="start" color="inherit">
+              <MenuIcon> </MenuIcon>
             </IconButton>
           </div>
-        <AvatarPic name={"Suleman"} email={"mmsulemanawan@gmail.com"} ></AvatarPic>
-          
+          <AvatarPic
+            name={"Suleman"}
+            email={"mmsulemanawan@gmail.com"}
+          ></AvatarPic>
         </div>
       </div>
       <div className="bg-[#737373]">

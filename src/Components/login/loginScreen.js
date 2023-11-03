@@ -4,13 +4,10 @@ import { Avatar, Button } from "@mui/material";
 import pic from "../pic.jpg";
 import { useNavigate } from "react-router-dom";
 
-
 const StartUpLogin = () => {
-
   const goto = useNavigate();
   const signinGoto = useNavigate();
 
-  
   return (
     <div
       style={{ backgroundColor: applicationColor.red }}
@@ -57,13 +54,17 @@ const StartUpLogin = () => {
           style={{ color: applicationColor.red }}
           className="flex flex-col justify-center items-center py-3"
         >
-          <Button variant="contained" className="w-5/12 rounded-2xl	"
-          onClick={() => signinGoto("/dashboard")}
+          <Button
+            variant="contained"
+            className="w-5/12 rounded-2xl	"
+            onClick={() => signinGoto("/dashboard/dashborady1")}
           >
             <span className=" font-light">Sign-in</span>
           </Button>
-          <Button variant="text" className="w-3/12"
-           onClick={() => goto("/signUpPage")}
+          <Button
+            variant="text"
+            className="w-3/12"
+            onClick={() => goto("/signUpPage")}
           >
             <span className="font-light">Signup</span>
           </Button>

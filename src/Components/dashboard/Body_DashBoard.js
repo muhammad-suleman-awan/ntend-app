@@ -3,78 +3,122 @@ import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const BodyDashBoard = () => {
-const navigate = useNavigate();
-  const Contract = useNavigate();
-  const addContract = useNavigate();
-  const Categories = useNavigate();
-  const AllContracts =useNavigate();
+  const navigate = useNavigate();
+  const {pathname} = useLocation();
+  // const Contract = useNavigate();
+  // const addContract = useNavigate();
+  // const Categories = useNavigate();
+  // const AllContracts = useNavigate();
   const logout = useNavigate();
+  const [activeButton, setActiveButton] = useState("null");
+  const handleButtonClick = (path, buttonKey) => {
+    navigate(path);
+    setActiveButton(buttonKey);
+  };
   const buttons = [
-  
     <Button
       variant="text"
       key="one"
-      className=" gap-5"
-      sx={{ display: "flex", justifyContent: "flex-start", background: "white" }}
-      onClick={()=>navigate("/dashboard/dashborady1")}
+      className="gap-5 "
+      // className={`gap-5 ${activeButton === "one" ? "bg-red-500" : "bg-blue-400"}`}
+      sx={{
+        // border: "2px solid red",
+        borderRadius: "10px",
+        color: "black",
+        display: "flex",
+        justifyContent: "flex-start",
+        backgroundColor: pathname === "/dashboard/dashborady1" ? "white" : "transparent",
+      }}
+      onClick={() => handleButtonClick("/dashboard/dashborady1", "one")}
     >
-      <HomeOutlinedIcon></HomeOutlinedIcon>
+    {console.log(pathname)}
+      <HomeOutlinedIcon />
       Dashboard
     </Button>,
+
     <Button
-      key="three"
-      sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
-      className="gap-5 flex justify-start"
       variant="text"
-      onClick={()=>Contract('/dashboard/Contract')}
+      key="two"
+      className="gap-5 rounded-lg"
+      // className={`gap-5 ${activeButton === "two" ? "bg-red-500" : ""}`}
+      sx={{
+        ".css-18ouuxk-MuiButtonGroup-root .MuiButtonGroup-lastButton, .css-18ouuxk-MuiButtonGroup-root .MuiButtonGroup-middleButton":
+          { borderRadius: "25px" },
+
+        color: "black",
+        display: "flex",
+        justifyContent: "flex-start",
+        backgroundColor: pathname === "/dashboard/Contract" ? "white" : "transparent",
+      }}
+      onClick={() => handleButtonClick("/dashboard/Contract", "two")}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       MY Contracts
     </Button>,
     <Button
       key="three"
-      sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
-      className="gap-5 flex justify-start"
+      sx={{
+        color: "black",
+        borderRadius: "25px",
+        display: "flex",
+        justifyContent: "flex-start",
+        backgroundColor: pathname === "/dashboard/addContract" ? "white" : "transparent",
+      }}
+      className="gap-5 border-2"
       variant="text"
-      onClick={()=>addContract('/dashboard/addContract')}
+      onClick={() => handleButtonClick("/dashboard/addContract", "three")}
     >
-      <HomeOutlinedIcon></HomeOutlinedIcon>
+      <HomeOutlinedIcon />
       Add Contract
     </Button>,
     <Button
-      key="one"
-      sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
+      key="four"
+      sx={{
+        color: "black",
+        display: "flex",
+        justifyContent: "flex-start",
+        borderRadius: "10px",
+        backgroundColor: activeButton === "four" ? "white" : "transparent",
+      }}
       className="gap-5"
       variant="text"
-      onClick={()=>Categories('/dashboard/Categories')}
+      onClick={() => handleButtonClick("/dashboard/Categories", "four")}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       Categories
     </Button>,
     <Button
-      key="two"
-      sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
+      key="five"
+      sx={{
+        color: "black",
+        display: "flex",
+        justifyContent: "flex-start",
+        borderRadius: "10px",
+        backgroundColor: activeButton === "five" ? "white" : "transparent",
+      }}
       className="gap-5"
       variant="text"
-      onClick={()=>AllContracts('/dashboard/AllContracts')}
+      onClick={() => handleButtonClick("/dashboard/AllContracts", "five")}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       All Contracts
     </Button>,
     <Button
       key="three"
-      sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
+      sx={{ color: "black", display: "flex", justifyContent: "flex-start" }}
       className="gap-5"
       variant="text"
-      onClick={()=>{logout('/logout')}}
-     >
+      onClick={() => {
+        logout("/logout");
+      }}
+    >
       <HomeOutlinedIcon></HomeOutlinedIcon>
       Logout
-    </Button>
-    
+    </Button>,
   ];
 
   return (

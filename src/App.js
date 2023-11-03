@@ -18,12 +18,14 @@ import StartUpLogin from "./Components/login/loginScreen";
 import Signup from "./Components/login/signup";
 import CardBodyMainDashBorad from "./Components/dashboard/bodycardDashBoard";
 import AppWrapper from "./Components/AppWrapper";
+import { colors } from "@mui/material";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/dashboard" element={<AppWrapper />}>
+            <Route index element={<CardBodyMainDashBorad />}/>
           <Route
             path="/dashboard/dashborady1"
             element={<CardBodyMainDashBorad />}
@@ -38,14 +40,12 @@ function App() {
             element={<CategoryScreenIndex />}
           />
           <Route path="/dashboard/AllContracts" element={<IndexScreen5 />} />
-          <Route path="/dashboard/profile" element={<Screen6Index />} />          
-          <Route path="/dashboard/profileset" element={<ProfileIndex />} />
+           {/* <Route path="/dashboard/profileset" element={<ProfileIndex />} /> */}
         </Route>
         <Route index element={<StartUpLogin />} />
         <Route path="/logout" element={<StartUpLogin />} />
         <Route path="/signUpPage" element={<Signup />} />
-        <Route path="/gotoSignUp" element={<StartUpLogin />} /> 
-
+        <Route path="/gotoSignUp" element={<StartUpLogin />} />
 
         {/* <Route path="/dashboard" element={<DashboardIndex />}></Route> */}
       </Routes>
