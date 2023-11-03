@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const BodyDashBoard = () => {
   const navigate = useNavigate();
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   // const Contract = useNavigate();
   // const addContract = useNavigate();
   // const Categories = useNavigate();
@@ -31,11 +31,12 @@ const BodyDashBoard = () => {
         color: "black",
         display: "flex",
         justifyContent: "flex-start",
-        backgroundColor: pathname === "/dashboard/dashborady1" ? "white" : "transparent",
+        backgroundColor:
+          pathname === "/dashboard/dashborady1" ? "white" : "transparent",
       }}
       onClick={() => handleButtonClick("/dashboard/dashborady1", "one")}
     >
-    {console.log(pathname)}
+      {/* {console.log(pathname)}  */}
       <HomeOutlinedIcon />
       Dashboard
     </Button>,
@@ -52,7 +53,8 @@ const BodyDashBoard = () => {
         color: "black",
         display: "flex",
         justifyContent: "flex-start",
-        backgroundColor: pathname === "/dashboard/Contract" ? "white" : "transparent",
+        backgroundColor:
+          pathname === "/dashboard/Contract" ? "white" : "transparent",
       }}
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
     >
@@ -66,7 +68,8 @@ const BodyDashBoard = () => {
         borderRadius: "25px",
         display: "flex",
         justifyContent: "flex-start",
-        backgroundColor: pathname === "/dashboard/addContract" ? "white" : "transparent",
+        backgroundColor:
+          pathname === "/dashboard/addContract" ? "white" : "transparent",
       }}
       className="gap-5 border-2"
       variant="text"
@@ -82,7 +85,8 @@ const BodyDashBoard = () => {
         display: "flex",
         justifyContent: "flex-start",
         borderRadius: "10px",
-        backgroundColor: activeButton === "four" ? "white" : "transparent",
+        backgroundColor:
+          pathname === "/dashboard/Categories" ? "white" : "transparent",
       }}
       className="gap-5"
       variant="text"
@@ -98,12 +102,14 @@ const BodyDashBoard = () => {
         display: "flex",
         justifyContent: "flex-start",
         borderRadius: "10px",
-        backgroundColor: activeButton === "five" ? "white" : "transparent",
+        backgroundColor:
+          pathname === "/dashboard/AllContracts" ? "white" : "transparent",
       }}
       className="gap-5"
       variant="text"
       onClick={() => handleButtonClick("/dashboard/AllContracts", "five")}
     >
+      {console.log("pathname MY All Contracts   ::   ", pathname)}
       <HomeOutlinedIcon></HomeOutlinedIcon>
       All Contracts
     </Button>,
@@ -122,20 +128,22 @@ const BodyDashBoard = () => {
   ];
 
   return (
-    <Box
-      className="gap-5 flex justify-center pt-10"
-      sx={{
-        display: "flex",
-      }}
-    >
-      <ButtonGroup
-        orientation="vertical"
-        aria-label="vertical outlined button group"
-        className="gap-5 flex justify-start "
+    <div className=" pt-3">
+      <Box
+        className=" flex justify-center "
+        sx={{
+          display: "flex",
+        }}
       >
-        {buttons}
-      </ButtonGroup>
-    </Box>
+        <ButtonGroup
+          orientation="vertical"
+          aria-label="vertical outlined button group"
+          className="gap-5 flex justify-start "
+        >
+          {buttons}
+        </ButtonGroup>
+      </Box>
+    </div>
   );
 };
 

@@ -9,11 +9,10 @@ const StartUpLogin = () => {
   const signinGoto = useNavigate();
 
   return (
-    <div
+    <div       className=" flex flex-col justify-center h-screen items-center mt-30 py-5  "
       style={{ backgroundColor: applicationColor.red }}
-      className=" flex flex-col justify-center h-screen items-center mt-30 py-5"
     >
-      <div className=" bg-white w-full lg:w-1/4 md:w-1/3 sm:w-1/2 rounded-3xl F">
+      <div className=" bg-white w-11/12 xl:w-3/12 lg:w-4/12 md:w-6/12 sm:w-6/12 rounded-3xl ">
         <div
           style={{ color: applicationColor.red }}
           className=" flex  justify-center items-center gap-5 h-40"

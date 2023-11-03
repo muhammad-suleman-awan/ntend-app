@@ -4,17 +4,23 @@ import pic from "../pic.jpg";
 import { applicationColor } from "../../Constants/color";
 import { useNavigate } from "react-router-dom";
 
-
 const Signup = () => {
   const goto = useNavigate();
   const gotoSignUp = useNavigate();
   return (
     <div
       style={{ backgroundColor: applicationColor.red }}
-      className="flex justify-center items-center h-screen "
+      className="flex justify-center items-center h-screen   "
     >
-      <div className="flex flex-col rounded-2xl  bg-white  gap-5 py-5 my-5 justify-center h-1/ w-full  lg:w-1/4 md:w-1/3 sm:w-1/2 px-5">
-        <div className="">
+      <div
+        className="flex flex-col rounded-2xl 
+       bg-white    justify-center  xl:w-3/12
+        lg:w-5/12 md:w-2/4 sm:w-1/5     h-screen
+             w-full
+
+        "
+      >
+        <div className=" ">
           <div id="log" className="flex justify-center gap-5">
             <Avatar alt="Remy Sharp" src={pic} />
             <span
@@ -37,9 +43,9 @@ const Signup = () => {
             </span>
           </div>
         </div>
-        <div
+        <div className="   flex flex-col items-center py-5"
+
           style={{ color: applicationColor.red }}
-          className="  flex flex-col items-center py-5"
         >
           <span className="w-2/5 flex w-9/12 py-2 text-black text-lg font-semibold">
             Name
@@ -70,19 +76,21 @@ const Signup = () => {
             className="rounded-md w-9/12"
           ></input>
         </div>
-        <div
-          style={{ color: applicationColor.red }}
-          className="flex flex-col justify-center items-center py-3"
-        >
-          <Button variant="contained" className="w-5/12 rounded-4xl	"
-           onClick={()=>gotoSignUp("/dashboard ")}
+        <div  className="  flex flex-col justify-center items-center "
 
+          style={{ color: applicationColor.red }}
+        >
+          <Button
+            variant="contained"
+            className="w-5/12 rounded-4xl	"
+            onClick={() => gotoSignUp("/dashboard ")}
           >
             <span className=" font-light">Signin</span>
           </Button>
-          <Button variant="text" className="w-3/12 mt-5 pt-2 border-2 border-red-500"
-           onClick={() => goto("/gotoSignUp")}
-
+          <Button
+            variant="text"
+            className="w-3/12 mt-5 pt-2 border-2 border-red-500"
+            onClick={() => goto("/gotoSignUp")}
           >
             <span className="font-light">Signup</span>
           </Button>

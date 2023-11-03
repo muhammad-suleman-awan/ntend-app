@@ -64,7 +64,7 @@ const columns = [
               customClass: {
                 popup: "bg-[#f4f4f4] p-4", // Apply Tailwind classes to the popup
                 title: "text-xl font-bold mb-4", // Apply Tailwind classes to the title
-                
+
                 confirmButton: "bg-blue-500 text-white px-8 py-2 rounded-full", // Apply Tailwind classes to the confirm button
               },
             })
@@ -118,9 +118,9 @@ const rows = [
 
 export default function RecordTabledashboard() {
   return (
-    <div>
-      <div className="flex justify-center mt-3 tableOverflow">
-        <div style={{ height: 420, width: "90%" }} className="bg-white">
+    <div className=" ">
+      <div className="flex justify-center mt-3 tableOverflow bdred">
+        <div style={{ height: 420, width: "90%" }} className="bg-white   ">
           <DataGrid
             rows={rows}
             columns={columns}

@@ -25,7 +25,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/dashboard" element={<AppWrapper />}>
-            <Route index element={<CardBodyMainDashBorad />}/>
+          <Route index element={<CardBodyMainDashBorad />} />
           <Route
             path="/dashboard/dashborady1"
             element={<CardBodyMainDashBorad />}
@@ -40,7 +40,7 @@ function App() {
             element={<CategoryScreenIndex />}
           />
           <Route path="/dashboard/AllContracts" element={<IndexScreen5 />} />
-           {/* <Route path="/dashboard/profileset" element={<ProfileIndex />} /> */}
+          {/* <Route path="/dashboard/profileset" element={<ProfileIndex />} /> */}
         </Route>
         <Route index element={<StartUpLogin />} />
         <Route path="/logout" element={<StartUpLogin />} />

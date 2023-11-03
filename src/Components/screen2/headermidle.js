@@ -17,8 +17,8 @@ const Search = styled("div")(({ theme }) => ({
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginLeft: 0,
-  backgroundColor:"white",
-//   width: "100%",
+  backgroundColor: "white",
+  //   width: "100%",
   [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(1),
     // width: "auto",
@@ -54,17 +54,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Mycontact() {
   return (
-    <div className=" flex justify-end pr-5 pt-5" >
- <Search sx={{width:"500px", display:"flex" , justifyContent:"end"}} >
-      <SearchIconWrapper>
-        <SearchIcon />
-      </SearchIconWrapper>
-      <StyledInputBase
-      className="flex"
-        placeholder="Search…"
-        inputProps={{ "aria-label": "search" }}
-      />
-    </Search>  
+    <div className=" flex justify-end pr-5 bdred">
+      <Search sx={{ width: "500px", display: "flex", justifyContent: "end" }}>
+        <SearchIconWrapper>
+          <SearchIcon />
+        </SearchIconWrapper>
+        <StyledInputBase
+          className="flex"
+          placeholder="Search…"
+          inputProps={{ "aria-label": "search" }}
+        />
+      </Search>
     </div>
   );
 }
