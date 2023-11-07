@@ -38,7 +38,7 @@ const BodyDashBoard = () => {
     >
       {/* {console.log(pathname)}  */}
       <HomeOutlinedIcon />
-      Dashboard
+      <span className="text:xs, font-bold">Dashboard</span>
     </Button>,
 
     <Button
@@ -59,7 +59,7 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      MY Contracts
+      <span className="text-xs font-bold">MY Contracts</span>
     </Button>,
     <Button
       key="three"
@@ -76,7 +76,7 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/addContract", "three")}
     >
       <HomeOutlinedIcon />
-      Add Contract
+      <span className="text-xs font-bold">   Add Contract</span>
     </Button>,
     <Button
       key="four"
@@ -93,7 +93,7 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/Categories", "four")}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      Categories
+      <span className="text-xs font-bold">  Categories </span>
     </Button>,
     <Button
       key="five"
@@ -111,7 +111,7 @@ const BodyDashBoard = () => {
     >
       {console.log("pathname MY All Contracts   ::   ", pathname)}
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      All Contracts
+      <span className="text-xs font-bold">  All Contracts</span>
     </Button>,
     <Button
       key="three"
@@ -123,7 +123,7 @@ const BodyDashBoard = () => {
       }}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      Logout
+      <span className="text-xs font-bold"> Logout</span>
     </Button>,
   ];
 

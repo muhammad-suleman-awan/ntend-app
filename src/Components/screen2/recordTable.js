@@ -17,15 +17,12 @@ const columns = [
     field: "id",
     headerName: "Name",
     sortable: false,
-    width: 850,
-    sx: {
-      // ".css-t89xny-MuiDataGrid-columnHeaderTitle": {
-      //   fontWeight: "bold",
-      // },
-    },
     //  fontWeight:"bolder",
-    headerClassName:
-      "flex justify-center tableContacts font-bold	 color-red-400", // Apply Tailwind classes
+    minWidth: 200,
+    width: 350,
+    maxWidth: 600,
+
+    headerClassName: "flex tableContacts font-bold	 color-red-400   	min-w-full	", // Apply Tailwind classes
     // headerStyle: { backgroundColor: "red", color: "white" }, // Apply inline styles
     renderCell: (params) => {
       return (
@@ -37,7 +34,10 @@ const columns = [
     field: "firstName",
     headerName: "Date",
     headerClassName: "tableContacts",
-    width: 150,
+
+    minWidth: 100,
+    width: 400,
+    maxWidth: 600,
     sortable: false,
     renderCell: (params) => {
       return <span>1/11/2202</span>;
@@ -48,7 +48,10 @@ const columns = [
     headerClassName: "tableContacts",
 
     headerName: "Detail",
-    width: 150,
+
+    minWidth: 100,
+    width: 400,
+    maxWidth: 600,
     sortable: false,
     renderCell: (params) => {
       return (
@@ -81,7 +84,9 @@ const columns = [
     headerName: "Publish",
     headerClassName: "tableContacts",
 
-    width: 150,
+    minWidth: 300,
+    width: 400,
+    maxWidth: 600,
     sortable: false,
     renderCell: (params) => {
       return <Checkbox color="default" />;
@@ -118,27 +123,21 @@ const rows = [
 
 export default function RecordTabledashboard() {
   return (
-    <div className=" ">
-      <div className="flex justify-center mt-3 tableOverflow bdred">
-        <div style={{ height: 420, width: "90%" }} className="bg-white   ">
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            disableColumnMenu={true}
-            hideFooterPagination
-            pagination={false}
-            hideFooter
-          />
-        </div>
+    <div className=" mx-auto mt-3    px-10    w-full">
+      <div className="flex w-full h-96	 max-h-screen min-h-full	  bg-white   overflow-auto px-10   ">
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          disableColumnMenu={true}
+          hideFooterPagination
+          pagination={false}
+          hideFooter
+          className="flex overflow-auto 	  "
+        />
       </div>
 
-      <Stack spacing={8} className="flex justify-center mt-5">
-        <Pagination
-          count={7}
-          siblingCount={0}
-          color="primary"
-          className="flex justify-center"
-        />
+      <Stack spacing={8} className="flex items-center mt-5 mx-10 ">
+        <Pagination count={7} siblingCount={0} color="primary" />
       </Stack>
     </div>
   );

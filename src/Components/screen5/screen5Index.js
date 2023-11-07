@@ -15,7 +15,7 @@ const IndexScreen5 = () => {
       <div className="bg-white mt-1 h-16 flex  justify-between pt-5 pl-5 pr-5 mb-1">
         <span className="text-3xl font-bold	">All Contracts</span>
       </div>
-      <div>
+      <div className="">
         <Mycontact></Mycontact>
         <ContractDetail></ContractDetail>
       </div>

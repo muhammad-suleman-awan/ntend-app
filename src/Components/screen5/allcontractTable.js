@@ -17,16 +17,16 @@ const columns = [
     field: "id",
     headerName: "Name",
     sortable: false,
-    width: 700,
-
+    // width:300,
+    maxWidth: 1250,
+    minWidth: 250,
     sx: {
       // ".css-t89xny-MuiDataGrid-columnHeaderTitle": {
       //   fontWeight: "bold",
       // },
     },
     //  fontWeight:"bolder",
-    headerClassName:
-      "flex justify-center tableContacts font-bold	 color-red-400", // Apply Tailwind classes
+    headerClassName: "flex justify-center tableContacts font-bold", // Apply Tailwind classes
     // headerStyle: { backgroundColor: "red", color: "white" }, // Apply inline styles
     renderCell: (params) => {
       return (
@@ -37,8 +37,9 @@ const columns = [
   {
     field: "firstName",
     headerName: "Date",
+    width:300,
+    maxWidth:400,
     headerClassName: "tableContacts",
-    width: 500,
     sortable: false,
     renderCell: (params) => {
       return <span>1/11/2202</span>;
@@ -49,7 +50,6 @@ const columns = [
     headerClassName: "tableContacts",
 
     headerName: " Detail",
-    width: 150,
     sortable: false,
     renderCell: (params) => {
       return (
@@ -70,8 +70,7 @@ const columns = [
                 title:
                   "font-bold	 mb-4 text-left border-b-2 border-black p-0 pl-5 pt-5 m-0", // Apply Tailwind classes to the title
                 confirmButton: "bg-blue-500 text-white px-8 py-2 rounded-full", // Apply Tailwind classes to the confirm button
- 
-               },
+              },
             })
           }
         >
@@ -102,8 +101,8 @@ const rows = [
 export default function ContractDetail() {
   return (
     <div>
-      <div className="flex justify-center mt-3 tableOverflow">
-        <div style={{ height: 420, width: "90%" }} className="bg-white">
+      <div className="flex justify-center mt-3  mx-10  overflow-auto">
+        <div className="bg-white w-full h-96    overflow-auto px-10 flex ">
           <DataGrid
             rows={rows}
             columns={columns}
