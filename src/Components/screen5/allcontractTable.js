@@ -17,9 +17,9 @@ const columns = [
     field: "id",
     headerName: "Name",
     sortable: false,
-    // width:300,
+    flex: 1,
     maxWidth: 1250,
-    minWidth: 250,
+    minWidth: 150,
     sx: {
       // ".css-t89xny-MuiDataGrid-columnHeaderTitle": {
       //   fontWeight: "bold",
@@ -37,8 +37,8 @@ const columns = [
   {
     field: "firstName",
     headerName: "Date",
-    width:300,
-    maxWidth:400,
+    flex: 1,
+    maxWidth: 400,
     headerClassName: "tableContacts",
     sortable: false,
     renderCell: (params) => {
@@ -48,6 +48,7 @@ const columns = [
   {
     field: "lastName",
     headerClassName: "tableContacts",
+    flex: 1,
 
     headerName: " Detail",
     sortable: false,
@@ -101,8 +102,8 @@ const rows = [
 export default function ContractDetail() {
   return (
     <div>
-      <div className="flex justify-center mt-3  mx-10  overflow-auto">
-        <div className="bg-white w-full h-96    overflow-auto px-10 flex ">
+      <div className="flex justify-center mt-3    overflow-auto ">
+        <div className="bg-white w-full h-96    overflow-auto  flex  ">
           <DataGrid
             rows={rows}
             columns={columns}
@@ -119,7 +120,7 @@ export default function ContractDetail() {
           count={7}
           siblingCount={0}
           color="primary"
-          className="flex justify-center"
+          className="flex justify-center hidden md:block"
         />
       </Stack>
     </div>

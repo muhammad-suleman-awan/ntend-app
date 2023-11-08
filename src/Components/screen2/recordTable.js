@@ -9,6 +9,7 @@ import Stack from "@mui/material/Stack";
 import { Button } from "@mui/material";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -16,10 +17,11 @@ const columns = [
   {
     field: "id",
     headerName: "Name",
+    hideable: true,
     sortable: false,
     //  fontWeight:"bolder",
-    minWidth: 200,
-    width: 350,
+    minWidth: 150,
+    flex: 1,
     maxWidth: 600,
 
     headerClassName: "flex tableContacts font-bold	 color-red-400   	min-w-full	", // Apply Tailwind classes
@@ -34,14 +36,13 @@ const columns = [
     field: "firstName",
     headerName: "Date",
     headerClassName: "tableContacts",
-
+    className: "bdred hidden sm:table-cell", // hidden on small screens, table-cell on medium screens and larger
     minWidth: 100,
-    width: 400,
+    Visible: "no",
+    flex: 1,
     maxWidth: 600,
     sortable: false,
-    renderCell: (params) => {
-      return <span>1/11/2202</span>;
-    },
+    renderCell: (params) => <span>1/11/2202</span>,
   },
   {
     field: "lastName",
@@ -50,7 +51,7 @@ const columns = [
     headerName: "Detail",
 
     minWidth: 100,
-    width: 400,
+    flex: 1,
     maxWidth: 600,
     sortable: false,
     renderCell: (params) => {
@@ -84,8 +85,8 @@ const columns = [
     headerName: "Publish",
     headerClassName: "tableContacts",
 
-    minWidth: 300,
-    width: 400,
+    minWidth: 100,
+    flex: 1,
     maxWidth: 600,
     sortable: false,
     renderCell: (params) => {
@@ -100,7 +101,7 @@ const columns = [
 
     description: "This column has a value getter and is not sortable.",
     sortable: false,
-    width: 100,
+    flex: 1,
     renderCell: (params) => <DeleteIcon className=" ml-5" />,
   },
 ];
@@ -123,8 +124,8 @@ const rows = [
 
 export default function RecordTabledashboard() {
   return (
-    <div className=" mx-auto mt-3    px-10    w-full">
-      <div className="flex w-full h-96	 max-h-screen min-h-full	  bg-white   overflow-auto px-10   ">
+    <div className=" mx-auto mt-3         w-full">
+      <div className="flex w-88 h-96	  sm:w=full  bg-white   overflow-auto    ">
         <DataGrid
           rows={rows}
           columns={columns}
@@ -132,12 +133,17 @@ export default function RecordTabledashboard() {
           hideFooterPagination
           pagination={false}
           hideFooter
-          className="flex overflow-auto 	  "
+          className="flex overflow-auto w-screen"
         />
       </div>
 
-      <Stack spacing={8} className="flex items-center mt-5 mx-10 ">
-        <Pagination count={7} siblingCount={0} color="primary" />
+      <Stack spacing={8} className="flex items-center mt-5 mx-10   ">
+        <Pagination
+          count={7}
+          siblingCount={0}
+          color="primary"
+          className="hidden md:block"
+        />
       </Stack>
     </div>
   );

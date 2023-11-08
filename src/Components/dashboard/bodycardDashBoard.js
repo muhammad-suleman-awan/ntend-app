@@ -12,9 +12,7 @@ const CardBodyMainDashBorad = () => {
     <> 
       <TopRowCard></TopRowCard>
       <BoptttomRowCard></BoptttomRowCard>
-      <div className=" stickyStyle md:hidden block">
-      <BodyDashBoard></BodyDashBoard>
-       </div>
+     
    
     </>
   );

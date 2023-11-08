@@ -17,7 +17,7 @@ const TopRowCard = () => {
     <div>
       {" "}
       <div className="  grid md:grid-cols-3 px-5 py-5 gap-5 ">
-        <span className="borderLineDown md:hidden block font-bold text-3xl pb-4">
+        <span className="borderLineDown md:hidden block font-bold text-3xl pb-4 stickySty">
           Latest
         </span>
         {dataPrintTop.map((bodyData) => (
@@ -29,7 +29,7 @@ const TopRowCard = () => {
         ))}
       </div>
       {dataPrintTop.map((bodyData) => (
-        <div className=" my-2  md:hidden block ">
+        <div className=" grid my-2  px-5 py-3 gap-5  md:hidden block ">
           <Accordion>
             <AccordionSummary
               aria-controls="panel2a-content"

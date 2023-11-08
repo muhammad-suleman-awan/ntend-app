@@ -3,7 +3,12 @@ import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import { useLocation, useNavigate } from "react-router-dom";
+import Person3Icon from '@mui/icons-material/Person3';
+import TocIcon from '@mui/icons-material/Toc';
+import DynamicFormIcon from '@mui/icons-material/DynamicForm';
+import CategoryIcon from '@mui/icons-material/Category';
 import { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 
@@ -61,7 +66,7 @@ const BodyDashBoard = () => {
       }}
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
     >
-      <HomeOutlinedIcon></HomeOutlinedIcon>
+      <TocIcon></TocIcon>
       <span className="text-xs font-bold  hidden md:block">MY Contracts</span>
     </Button>,
     <Button
@@ -69,16 +74,19 @@ const BodyDashBoard = () => {
       sx={{
         color: "black",
         borderRadius: "25px",
-        display: "flex",
+        display: ["none", "none", "flex"], // Default is "row" for xs, sm, and md screens
+        [theme.breakpoints.up("sm")]: {
+          display: "flex",
+        }, // Change to "column" for lg and larger screens
         justifyContent: "flex-start",
         backgroundColor:
           pathname === "/dashboard/addContract" ? "white" : "transparent",
       }}
-      className="gap-5 border-2"
+      className="gap-5 border-2  "
       variant="text"
       onClick={() => handleButtonClick("/dashboard/addContract", "three")}
     >
-      <HomeOutlinedIcon />
+      <AppRegistrationIcon></AppRegistrationIcon>
       <span className="text-xs font-bold  hidden md:block"> Add Contract</span>
     </Button>,
     <Button
@@ -95,7 +103,7 @@ const BodyDashBoard = () => {
       variant="text"
       onClick={() => handleButtonClick("/dashboard/Categories", "four")}
     >
-      <HomeOutlinedIcon></HomeOutlinedIcon>
+      <CategoryIcon></CategoryIcon>
       <span className="text-xs font-bold  hidden md:block"> Categories </span>
     </Button>,
     <Button
@@ -113,7 +121,7 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/AllContracts", "five")}
     >
       {console.log("pathname MY All Contracts   ::   ", pathname)}
-      <HomeOutlinedIcon></HomeOutlinedIcon>
+      <DynamicFormIcon></DynamicFormIcon>
       <span className="text-xs font-bold  hidden md:block"> All Contracts</span>
     </Button>,
     <Button
@@ -125,7 +133,7 @@ const BodyDashBoard = () => {
         logout("/logout");
       }}
     >
-      <HomeOutlinedIcon></HomeOutlinedIcon>
+      <Person3Icon></Person3Icon>
       <span className="text-xs font-bold  hidden md:block"> Logout</span>
     </Button>,
   ];
@@ -141,7 +149,7 @@ const BodyDashBoard = () => {
         <ButtonGroup
           orientation="vertical"
           aria-label="vertical outlined button group"
-          className="gap-5  justify-start  flex "
+          className="gap-5  justify-start  flex  "
           sx={{
             display: "flex",
             flexDirection: ["row", "row", "column"], // Default is "row" for xs, sm, and md screens
