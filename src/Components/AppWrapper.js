@@ -6,12 +6,12 @@ import { Button, IconButton } from "@mui/material";
 
 const AppWrapper = () => {
   return (
-    <div className="h-screen grid grid-cols-12   bg:sm-red-100 bg-[#737373] bdred">
-      <div className="lg:col-span-2 md:col-span-3 h-screen bg-[#737373]  bdred   ">
-         <DrawerBoard></DrawerBoard> 
+    <div className="h-screen grid grid-cols-12   bg-[#737373]  ">
+      <div className="lg:col-span-2 md:col-span-3 hidden md:block h-screen bg-[#737373] ">
+        <DrawerBoard></DrawerBoard>
       </div>
-      <div className="lg:col-span-10  md:col-span-9 h-screen bg-[#dedede] bdred ">
-        {/* <div className="flex justify-end pr-5 h-16 place-content-center bg-white 	pt-5">
+      <div className="lg:col-span-10  md:col-span-9 h-screen col-span-12 bg-[#dedede]   ">
+        <div className="flex justify-end pr-5 h-16 place-content-center bg-white 	pt-5 hidden md:block">
           <IconButton
             size="large"
             edge="start"
@@ -21,9 +21,9 @@ const AppWrapper = () => {
             <HeaderIcon></HeaderIcon>
           </IconButton>
         </div>
-        <div className="bg-[#dedede] ">
+        <div className="bg-white md:bg-[#dedede] ">
           <Outlet />
-        </div> */}
+        </div>
       </div>
     </div>
   );

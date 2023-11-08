@@ -64,3 +64,23 @@
 .bdred{
   border: 2px solid red;
 }
+
+.borderLineDown{
+  border-bottom: 2px solid black;
+  
+}
+
+/* .tp{
+  width: 100%;
+  height: 500px;
+  background: red;
+  transition: height 8s;
+} */
+
+
+.stickyStyle{
+  position: sticky; 
+  bottom: 0;
+  background-color: rebeccapurple;
+
+}

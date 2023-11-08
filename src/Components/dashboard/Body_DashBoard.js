@@ -5,8 +5,11 @@ import Box from "@mui/material/Box";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useTheme } from "@mui/material/styles";
 
 const BodyDashBoard = () => {
+  const theme = useTheme();
+
   const navigate = useNavigate();
   const { pathname } = useLocation();
   // const Contract = useNavigate();
@@ -38,7 +41,7 @@ const BodyDashBoard = () => {
     >
       {/* {console.log(pathname)}  */}
       <HomeOutlinedIcon />
-      <span className="text:xs, font-bold">Dashboard</span>
+      <span className="text:xs, font-bold hidden md:block">Dashboard</span>
     </Button>,
 
     <Button
@@ -59,7 +62,7 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      <span className="text-xs font-bold">MY Contracts</span>
+      <span className="text-xs font-bold  hidden md:block">MY Contracts</span>
     </Button>,
     <Button
       key="three"
@@ -76,7 +79,7 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/addContract", "three")}
     >
       <HomeOutlinedIcon />
-      <span className="text-xs font-bold">   Add Contract</span>
+      <span className="text-xs font-bold  hidden md:block"> Add Contract</span>
     </Button>,
     <Button
       key="four"
@@ -93,7 +96,7 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/Categories", "four")}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      <span className="text-xs font-bold">  Categories </span>
+      <span className="text-xs font-bold  hidden md:block"> Categories </span>
     </Button>,
     <Button
       key="five"
@@ -111,7 +114,7 @@ const BodyDashBoard = () => {
     >
       {console.log("pathname MY All Contracts   ::   ", pathname)}
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      <span className="text-xs font-bold">  All Contracts</span>
+      <span className="text-xs font-bold  hidden md:block"> All Contracts</span>
     </Button>,
     <Button
       key="three"
@@ -123,14 +126,14 @@ const BodyDashBoard = () => {
       }}
     >
       <HomeOutlinedIcon></HomeOutlinedIcon>
-      <span className="text-xs font-bold"> Logout</span>
+      <span className="text-xs font-bold  hidden md:block"> Logout</span>
     </Button>,
   ];
 
   return (
     <div className=" pt-3">
       <Box
-        className=" flex justify-center "
+        className=" flex justify-center"
         sx={{
           display: "flex",
         }}
@@ -138,7 +141,14 @@ const BodyDashBoard = () => {
         <ButtonGroup
           orientation="vertical"
           aria-label="vertical outlined button group"
-          className="gap-5 flex justify-start "
+          className="gap-5  justify-start  flex "
+          sx={{
+            display: "flex",
+            flexDirection: ["row", "row", "column"], // Default is "row" for xs, sm, and md screens
+            [theme.breakpoints.up("sm")]: {
+              flexDirection: "column", // Change to "column" for lg and larger screens
+            },
+          }}
         >
           {buttons}
         </ButtonGroup>
