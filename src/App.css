@@ -84,4 +84,17 @@
   background-color: rebeccapurple;
 
 }
+
+.postionfloat{
+  float:inline-end
+}
+
+.disppt{
+  display: flex;
+}
+
+
+.drawRadius{
+  border-radius:20px;
+}
  

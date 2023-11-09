@@ -54,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Mycontact() {
   return (
-    <div className=" flex justify-end pr-5    hidden md:block">
+    <div className=" flex justify-end  pr-5  disppt  hidden md:block">
       <Search sx={{ width: "500px", display: "flex", justifyContent: "end" }}>
         <SearchIconWrapper>
           <SearchIcon />

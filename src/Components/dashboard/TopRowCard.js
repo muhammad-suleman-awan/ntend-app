@@ -16,7 +16,7 @@ const TopRowCard = () => {
   return (
     <div>
       {" "}
-      <div className="  grid md:grid-cols-3 px-5 py-5 gap-5 ">
+      <div className="  grid md:grid-cols-3 px-5 py-5 gap-5 xl:grid-cols-5 lg:grid-cols-4">
         <span className="borderLineDown md:hidden block font-bold text-3xl pb-4 stickySty">
           Latest
         </span>

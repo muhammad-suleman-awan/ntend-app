@@ -3,7 +3,7 @@ import Person3Icon from '@mui/icons-material/Person3';
 
 const HeaderIcon = () => {
   return (
-    <div>
+    <div className=' w-6 postionfloat'>
         <Person3Icon/>
     </div>
   )

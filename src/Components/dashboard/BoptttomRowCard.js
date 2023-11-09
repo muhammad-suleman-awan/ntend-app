@@ -23,7 +23,7 @@ const BoptttomRowCard = () => {
   };
   return (
     <div>
-      <div className="  grid md:grid-cols-3 grid-cols-2    px-5 py-5 gap-5 ">
+      <div className="  grid md:grid-cols-3 grid-cols-2  xl:grid-cols-5 lg:grid-cols-4  px-5 py-5 gap-5 ">
         {dataPrintBottom.map((bodyData) => (
           <div className=" bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-lg   gap-5 pt-5 pb-5 justify-center  hidden md:block">
             <h1 className="flex justify-center">{bodyData.title}</h1>

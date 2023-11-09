@@ -8,36 +8,37 @@ import { useNavigate } from "react-router-dom";
 
 const DrawerBoard = () => {
   return (
-    <div className="  h-screen  flex flex-col   pb-2">
-      <div className=" bg-[#67e8f9] p-1">
-        <div id="log" className="flex  ">
-          <div className="">
+    <div className="  h-screen  flex flex-col  pb-2">
+      <div className=" bg-[#98e5ff] pt-1">
+        <div
+          id="log"
+          className="flex justify-between place-items-center	px-3 mt-3"
+        >
+          <div className=" ">
             <Avatar alt="Remy Sharp" src={pic} className=" " />
           </div>
-          <div className="flex ">
+          <div className="flex justify-center     ">
             <span
-              className="text-blue-600 xl:text-2xl text-lg font-bold pl-5"
+              className="text-[#4579ff] md:text-sm text-sm font-bold decoration-8	indent-px leading-8	"
               style={{ fontFamily: "cursive" }}
             >
               NTEND INFO
             </span>
           </div>
-          <div className=" flex justify-end">
-            <IconButton size="large" edge="start" color="inherit">
-              <MenuIcon> </MenuIcon>
-            </IconButton>
+          <div className=" flex justify-end  ">
+            <MenuIcon> </MenuIcon>
           </div>
         </div>
-        <div className=" ">
+        <div className="  mb-5 ">
           <AvatarPic></AvatarPic>
-          <h1 className="flex justify-center text-lg font-bold	">{"Suleman"}</h1>
-          <h1 className="flex justify-center text-xs	">
-            mmsulemanawan@gmail.com
+          <h1 className="flex justify-center text-lg text-black font-medium">
+            Jessica
           </h1>
+          <h1 className="flex justify-center text-xs	">jessicaBauer@yahoo.com</h1>
         </div>
       </div>
 
-      <div className="bg-[#737373] h-screen">
+      <div className="bg-[#35393f] h-screen">
         <BodyDashBoard> </BodyDashBoard>
       </div>
     </div>

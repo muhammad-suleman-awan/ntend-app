@@ -3,12 +3,12 @@ import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import { useLocation, useNavigate } from "react-router-dom";
-import Person3Icon from '@mui/icons-material/Person3';
-import TocIcon from '@mui/icons-material/Toc';
-import DynamicFormIcon from '@mui/icons-material/DynamicForm';
-import CategoryIcon from '@mui/icons-material/Category';
+import Person3Icon from "@mui/icons-material/Person3";
+import TocIcon from "@mui/icons-material/Toc";
+import DynamicFormIcon from "@mui/icons-material/DynamicForm";
+import CategoryIcon from "@mui/icons-material/Category";
 import { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 
@@ -31,22 +31,27 @@ const BodyDashBoard = () => {
     <Button
       variant="text"
       key="one"
-      className="gap-5 "
+      className="gap-5"
+      style={{ borderRadius: "10px" }}
       // className={`gap-5 ${activeButton === "one" ? "bg-red-500" : "bg-blue-400"}`}
       sx={{
         // border: "2px solid red",
-        borderRadius: "10px",
-        color: "black",
+
+        color: "white",
         display: "flex",
         justifyContent: "flex-start",
         backgroundColor:
-          pathname === "/dashboard/dashborady1" ? "white" : "transparent",
+          pathname === "/dashboard/dashborady1" ? "#4c75b4" : "transparent",
       }}
       onClick={() => handleButtonClick("/dashboard/dashborady1", "one")}
     >
       {/* {console.log(pathname)}  */}
-      <HomeOutlinedIcon />
-      <span className="text:xs, font-bold hidden md:block">Dashboard</span>
+      <HomeOutlinedIcon
+       
+      ></HomeOutlinedIcon>
+      <span className="text:xs font-bold hidden md:block">
+        <h1 className="text:2xs font-bold  ">Dashboard</h1>
+      </span>
     </Button>,
 
     <Button
@@ -55,24 +60,28 @@ const BodyDashBoard = () => {
       className="gap-5 rounded-lg"
       // className={`gap-5 ${activeButton === "two" ? "bg-red-500" : ""}`}
       sx={{
-        ".css-18ouuxk-MuiButtonGroup-root .MuiButtonGroup-lastButton, .css-18ouuxk-MuiButtonGroup-root .MuiButtonGroup-middleButton":
-          { borderRadius: "25px" },
+        // ".css-18ouuxk-MuiButtonGroup-root .MuiButtonGroup-lastButton, .css-18ouuxk-MuiButtonGroup-root .MuiButtonGroup-middleButton":
+        //   { borderRadius: "25px" },
 
-        color: "black",
+        color: "white",
         display: "flex",
         justifyContent: "flex-start",
         backgroundColor:
-          pathname === "/dashboard/Contract" ? "white" : "transparent",
+          pathname === "/dashboard/Contract" ? "#4c75b4" : "transparent",
       }}
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
+      style={{ borderRadius: "10px" }}
     >
-      <TocIcon></TocIcon>
+      <TocIcon
+         
+      ></TocIcon>
       <span className="text-xs font-bold  hidden md:block">MY Contracts</span>
     </Button>,
     <Button
+      style={{ borderRadius: "10px" }}
       key="three"
       sx={{
-        color: "black",
+        color: "white",
         borderRadius: "25px",
         display: ["none", "none", "flex"], // Default is "row" for xs, sm, and md screens
         [theme.breakpoints.up("sm")]: {
@@ -80,60 +89,72 @@ const BodyDashBoard = () => {
         }, // Change to "column" for lg and larger screens
         justifyContent: "flex-start",
         backgroundColor:
-          pathname === "/dashboard/addContract" ? "white" : "transparent",
+          pathname === "/dashboard/addContract" ? "#4c75b4" : "transparent",
       }}
       className="gap-5 border-2  "
       variant="text"
       onClick={() => handleButtonClick("/dashboard/addContract", "three")}
     >
-      <AppRegistrationIcon></AppRegistrationIcon>
+      <AppRegistrationIcon
+         
+      ></AppRegistrationIcon>
       <span className="text-xs font-bold  hidden md:block"> Add Contract</span>
     </Button>,
     <Button
+      style={{ borderRadius: "10px" }}
       key="four"
+      borderRadius="5"
       sx={{
-        color: "black",
+        color: "white",
         display: "flex",
         justifyContent: "flex-start",
         borderRadius: "10px",
         backgroundColor:
-          pathname === "/dashboard/Categories" ? "white" : "transparent",
+          pathname === "/dashboard/Categories" ? "#4c75b4" : "transparent",
       }}
       className="gap-5"
       variant="text"
       onClick={() => handleButtonClick("/dashboard/Categories", "four")}
     >
-      <CategoryIcon></CategoryIcon>
+      <CategoryIcon
+         
+      ></CategoryIcon>
       <span className="text-xs font-bold  hidden md:block"> Categories </span>
     </Button>,
     <Button
+      style={{ borderRadius: "10px" }}
       key="five"
       sx={{
-        color: "black",
+        color: "white",
         display: "flex",
         justifyContent: "flex-start",
         borderRadius: "10px",
         backgroundColor:
-          pathname === "/dashboard/AllContracts" ? "white" : "transparent",
+          pathname === "/dashboard/AllContracts" ? "#4c75b4" : "transparent",
       }}
       className="gap-5"
       variant="text"
       onClick={() => handleButtonClick("/dashboard/AllContracts", "five")}
     >
       {console.log("pathname MY All Contracts   ::   ", pathname)}
-      <DynamicFormIcon></DynamicFormIcon>
+      <DynamicFormIcon
+     
+      ></DynamicFormIcon>
       <span className="text-xs font-bold  hidden md:block"> All Contracts</span>
     </Button>,
     <Button
+      style={{ borderRadius: "10px" }}
       key="three"
-      sx={{ color: "black", display: "flex", justifyContent: "flex-start" }}
+      sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5"
-      variant="text"
+      variant="text" 
       onClick={() => {
         logout("/logout");
       }}
     >
-      <Person3Icon></Person3Icon>
+      <Person3Icon
+        
+      ></Person3Icon>
       <span className="text-xs font-bold  hidden md:block"> Logout</span>
     </Button>,
   ];
