@@ -58,16 +58,18 @@ const StartUpLogin = () => {
           <Button
             variant="contained"
             className="w-5/12 rounded-2xl	"
+            style={{borderRadius:"10px"}}
+
             onClick={() => signinGoto("/dashboard/dashborady1")}
           >
-            <span className=" font-light">Sign-in</span>
+            <span className=" font-light normal-case	">Sign-in</span>
           </Button>
           <Button
             variant="text"
             className="w-3/12"
             onClick={() => goto("/signUpPage")}
           >
-            <span className="font-light">Signup</span>
+            <span className="font-light normal-case	">Signup</span>
           </Button>
         </div>
       </div>

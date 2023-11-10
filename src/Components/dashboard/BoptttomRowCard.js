@@ -23,11 +23,15 @@ const BoptttomRowCard = () => {
   };
   return (
     <div>
-      <div className="  grid md:grid-cols-3 grid-cols-2  xl:grid-cols-5 lg:grid-cols-4  px-5 py-5 gap-5 ">
+      <div className="  grid md:grid-cols-2  grid-cols-2  2xl:grid-cols-5  xl:grid-cols-4 lg:grid-cols-3  px-5 py-5 gap-5 ">
         {dataPrintBottom.map((bodyData) => (
           <div className="bgcolor rounded-lg   gap-5 pt-5 pb-5 justify-center  hidden md:block">
-            <h1 className="flex justify-center font-medium text-xl text-white">{bodyData.title}</h1>
-            <h1 className="flex justify-center font-semibold	 leading-10 text-3xl text-white">{bodyData.body}</h1>
+            <h1 className="flex justify-center font-bold	 text-2xl text-white leading-10		">
+              {bodyData.title}
+            </h1>
+            <h1 className="flex justify-center font-bold	 text-6xl text-white leading-tight		">
+              {bodyData.body}
+            </h1>
           </div>
         ))}
       </div>
@@ -44,12 +48,12 @@ const BoptttomRowCard = () => {
               id="panel1bh-header"
             >
               <Typography sx={{ width: "100%", flexShrink: 0 }}>
-                <span className=" font-bold  text-lg	"> {bodyData.title}</span>
+                <span className=" flex justify-center font-bold	 text-2xl text-white leading-10		"> {bodyData.title}</span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <span className="font-black text-rose-500	">
+                <span className="flex justify-center font-bold	 text-6xl text-white leading-tight		">
                   {bodyData.body}
                 </span>
               </Typography>

@@ -32,7 +32,7 @@ const BodyDashBoard = () => {
       variant="text"
       key="one"
       className="gap-5  "
-      style={{ borderRadius: "5px" }}
+      style={{ borderRadius: "10px" }}
       // className={`gap-5 ${activeButton === "one" ? "bg-red-500" : "bg-blue-400"}`}
       sx={{
         // border: "2px solid red",
@@ -50,7 +50,7 @@ const BodyDashBoard = () => {
        
       ></HomeOutlinedIcon>
       <span className="text:xs font-bold hidden md:block">
-        <h1 className="text:2xs font-bold  ">Dashboard</h1>
+        <h1 className="text:2xs font-bold normal-case	  ">Dashboard</h1>
       </span>
     </Button>,
 
@@ -70,15 +70,15 @@ const BodyDashBoard = () => {
           pathname === "/dashboard/Contract" ? "#4c75b4" : "transparent",
       }}
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
-      style={{ borderRadius: "5px" }}
+      style={{ borderRadius: "10px" }}
     >
       <TocIcon
          
       ></TocIcon>
-      <span className="text-xs font-bold  hidden md:block">MY Contracts</span>
+      <span className="text-xs font-bold  hidden md:block normal-case	">My Contracts</span>
     </Button>,
     <Button
-      style={{ borderRadius: "5px" }}
+      style={{ borderRadius: "10px" }}
       key="three"
       sx={{
         color: "white",
@@ -98,10 +98,10 @@ const BodyDashBoard = () => {
       <AppRegistrationIcon
          
       ></AppRegistrationIcon>
-      <span className="text-xs font-bold  hidden md:block"> Add Contract</span>
+      <span className="text-xs font-bold  hidden md:block normal-case	"> Add Contract</span>
     </Button>,
     <Button
-      style={{ borderRadius: "5px" }}
+      style={{ borderRadius: "10px" }}
       key="four"
       borderRadius="5"
       sx={{
@@ -119,10 +119,10 @@ const BodyDashBoard = () => {
       <CategoryIcon
          
       ></CategoryIcon>
-      <span className="text-xs font-bold  hidden md:block"> Categories </span>
+      <span className="text-xs font-bold  hidden md:block normal-case	"> Categories </span>
     </Button>,
     <Button
-      style={{ borderRadius: "5px" }}
+      style={{ borderRadius: "10px" }}
       key="five"
       sx={{
         color: "white",
@@ -140,10 +140,10 @@ const BodyDashBoard = () => {
       <DynamicFormIcon
      
       ></DynamicFormIcon>
-      <span className="text-xs font-bold  hidden md:block"> All Contracts</span>
+      <span className="text-xs font-bold  hidden md:block normal-case	"> All Contracts</span>
     </Button>,
     <Button
-      style={{ borderRadius: "5px" }}
+      style={{ borderRadius: "10px" }}
       key="three"
       sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5"
@@ -155,7 +155,7 @@ const BodyDashBoard = () => {
       <Person3Icon
         
       ></Person3Icon>
-      <span className="text-xs font-bold  hidden md:block"> Logout</span>
+      <span className="text-xs font-bold  hidden md:block normal-case	"> Logout</span>
     </Button>,
   ];
 
