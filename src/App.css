@@ -98,3 +98,11 @@
   border-radius:20px;
 }
  
+.drwMaxwidth{
+  max-width: 280px;
+}
+
+.bgcolor{
+  background-image: linear-gradient(#ac7dda, #be70d1, #8d89de);
+
+}

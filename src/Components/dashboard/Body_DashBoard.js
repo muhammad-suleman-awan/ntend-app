@@ -31,8 +31,8 @@ const BodyDashBoard = () => {
     <Button
       variant="text"
       key="one"
-      className="gap-5"
-      style={{ borderRadius: "10px" }}
+      className="gap-5  "
+      style={{ borderRadius: "5px" }}
       // className={`gap-5 ${activeButton === "one" ? "bg-red-500" : "bg-blue-400"}`}
       sx={{
         // border: "2px solid red",
@@ -70,7 +70,7 @@ const BodyDashBoard = () => {
           pathname === "/dashboard/Contract" ? "#4c75b4" : "transparent",
       }}
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "5px" }}
     >
       <TocIcon
          
@@ -78,7 +78,7 @@ const BodyDashBoard = () => {
       <span className="text-xs font-bold  hidden md:block">MY Contracts</span>
     </Button>,
     <Button
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "5px" }}
       key="three"
       sx={{
         color: "white",
@@ -101,7 +101,7 @@ const BodyDashBoard = () => {
       <span className="text-xs font-bold  hidden md:block"> Add Contract</span>
     </Button>,
     <Button
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "5px" }}
       key="four"
       borderRadius="5"
       sx={{
@@ -122,7 +122,7 @@ const BodyDashBoard = () => {
       <span className="text-xs font-bold  hidden md:block"> Categories </span>
     </Button>,
     <Button
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "5px" }}
       key="five"
       sx={{
         color: "white",
@@ -143,7 +143,7 @@ const BodyDashBoard = () => {
       <span className="text-xs font-bold  hidden md:block"> All Contracts</span>
     </Button>,
     <Button
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "5px" }}
       key="three"
       sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5"
@@ -162,7 +162,7 @@ const BodyDashBoard = () => {
   return (
     <div className=" pt-3">
       <Box
-        className=" flex justify-center"
+        className=" flex justify-center "
         sx={{
           display: "flex",
         }}
@@ -170,7 +170,8 @@ const BodyDashBoard = () => {
         <ButtonGroup
           orientation="vertical"
           aria-label="vertical outlined button group"
-          className="gap-5  justify-start  flex  "
+          className="gap-5  justify-start  flex   drwMaxwidth  w-full mx-3	"
+ 
           sx={{
             display: "flex",
             flexDirection: ["row", "row", "column"], // Default is "row" for xs, sm, and md screens

@@ -21,10 +21,10 @@ const TopRowCard = () => {
           Latest
         </span>
         {dataPrintTop.map((bodyData) => (
-          <div className="bg-white rounded-lg flex flex-col gap-5 pt-5 pb-5 borderLineDown md:block hidden">
-            <h1 className="flex justify-center">{bodyData.title}</h1>
-            <p className="flex justify-center">{bodyData.body}</p>
-            <h5 className="flex justify-center">{bodyData.date}</h5>
+          <div className="bg-white rounded-lg flex flex-col gap-5 pt-5 pb-5  md:block hidden">
+            <h1 className="flex justify-center font-bold text-xl text-black">{bodyData.title}</h1>
+            <p className="flex justify-center font-medium	">{bodyData.body}</p>
+            <h5 className="flex justify-center font-medium	">{bodyData.date}</h5>
           </div>
         ))}
       </div>
@@ -35,11 +35,11 @@ const TopRowCard = () => {
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>{bodyData.title}</Typography>
-            </AccordionSummary>
+              <h1 className=" font-bold text-xl">{bodyData.title}</h1>
+             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{bodyData.body}</Typography>
-              <Typography>{bodyData.date}</Typography>
+              <p className=" font-medium">{bodyData.body}</p>
+              <h5 className=" font-medium">{bodyData.date}</h5>
             </AccordionDetails>
           </Accordion>
         </div>

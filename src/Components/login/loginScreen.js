@@ -2,6 +2,8 @@ import React from "react";
 import { applicationColor } from "../../Constants/color";
 import { Avatar, Button } from "@mui/material";
 import pic from "../pic.jpg";
+import pic2 from "../pic2.jpg";
+
 import { useNavigate } from "react-router-dom";
 
 const StartUpLogin = () => {
@@ -18,7 +20,7 @@ const StartUpLogin = () => {
           className=" flex  justify-center items-center gap-5 h-40"
         >
           <div id="log">
-            <Avatar alt="Remy Sharp" src={pic} />
+            <Avatar alt="Remy Sharp" src={pic2} />
           </div>
           <div id="appName">
             {" "}

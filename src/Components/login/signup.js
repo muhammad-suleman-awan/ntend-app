@@ -1,5 +1,6 @@
 import { Avatar, Button } from "@mui/material";
 import React from "react";
+import pic2 from "../pic2.jpg";
 import pic from "../pic.jpg";
 import { applicationColor } from "../../Constants/color";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +23,7 @@ const Signup = () => {
       >
         <div className=" ">
           <div id="log" className="flex justify-center gap-5">
-            <Avatar alt="Remy Sharp" src={pic} />
+            <Avatar alt="Remy Sharp" src={pic2} />
             <span
               className="text-blue-600 text-3xl font-bold"
               style={{ fontFamily: "cursive" }}

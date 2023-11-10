@@ -12,7 +12,7 @@ const AppWrapper = () => {
         <DrawerBoard></DrawerBoard>
       </div>
       <div className="xl:col-span-10  lg:col-span-9  md:col-span-9 h-screen col-span-12 bg-[#dedede]  flex flex-col place-content-between md:place-content-start	">
-        {/* <div className="flex justify-end   pr-5 h-16 place-content-center bg-white 	pt-5   hidden md:block ">
+        <div className="flex justify-end   pr-5 h-16 place-content-center bg-white 	pt-5   hidden md:block ">
           <HeaderIcon></HeaderIcon>
         </div>
         <div className="bg-white md:bg-[#dedede] ">
@@ -20,7 +20,7 @@ const AppWrapper = () => {
         </div>
         <div className=" stickyStyle md:hidden block      ">
           <BodyDashBoard></BodyDashBoard>
-        </div> */}
+        </div>
       </div>
     </div>
   );
