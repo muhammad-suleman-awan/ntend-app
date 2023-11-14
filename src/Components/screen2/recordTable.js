@@ -24,11 +24,14 @@ const columns = [
     flex: 1,
     maxWidth: 600,
 
-    headerClassName: "flex tableContacts font-bold	 color-red-400   	min-w-full	", // Apply Tailwind classes
+    headerClassName:
+      "flex tableContacts  	 color-red-400  font-bold	text-base leading-7		  	min-w-full	", // Apply Tailwind classes
     // headerStyle: { backgroundColor: "red", color: "white" }, // Apply inline styles
     renderCell: (params) => {
       return (
-        <span className="flex justify-center font-bold	text-base	">Contract</span>
+        <span className="flex justify-center font-bold	text-base leading-7		">
+          Contract
+        </span>
       );
     },
   },
@@ -51,7 +54,7 @@ const columns = [
     headerName: "Detail",
 
     minWidth: 100,
-    flex: 1,
+    flex: 0.5,
     maxWidth: 600,
     sortable: false,
     renderCell: (params) => {
@@ -86,7 +89,7 @@ const columns = [
     headerClassName: "tableContacts",
 
     minWidth: 100,
-    flex: 1,
+    flex: 0.5,
     maxWidth: 600,
     sortable: false,
     renderCell: (params) => {
@@ -124,27 +127,15 @@ const rows = [
 
 export default function RecordTabledashboard() {
   return (
-    <div className=" mx-auto mt-3         w-full">
-      <div className="flex w-88 h-96	  sm:w=full  bg-white   overflow-auto    ">
+    <div className="mx-auto mt-3 w-full px-5">
+      <div className="flex flex-col   w-88 h-96 sm:w-full bg-white">
         <DataGrid
           rows={rows}
           columns={columns}
           disableColumnMenu={true}
-          hideFooterPagination
-          pagination={false}
-          hideFooter
           className="flex overflow-auto w-screen"
         />
       </div>
-
-      <Stack spacing={8} className="flex items-center mt-5 mx-10   ">
-        <Pagination
-          count={7}
-          siblingCount={0}
-          color="primary"
-          className="hidden md:block"
-        />
-      </Stack>
     </div>
   );
 }

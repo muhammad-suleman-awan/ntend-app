@@ -46,11 +46,9 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/dashborady1", "one")}
     >
       {/* {console.log(pathname)}  */}
-      <HomeOutlinedIcon
-       
-      ></HomeOutlinedIcon>
+      <HomeOutlinedIcon></HomeOutlinedIcon>
       <span className="text:xs font-bold hidden md:block">
-        <h1 className="text:2xs font-bold normal-case	  ">Dashboard</h1>
+        <h1 className="text-xl	font-bold normal-case	leading-6	  ">Dashboard</h1>
       </span>
     </Button>,
 
@@ -72,10 +70,12 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
       style={{ borderRadius: "10px" }}
     >
-      <TocIcon
-         
-      ></TocIcon>
-      <span className="text-xs font-bold  hidden md:block normal-case	">My Contracts</span>
+      <TocIcon></TocIcon>
+      <span className="text-xs font-bold  hidden md:block normal-case	">
+        <h1 className="text-xl	font-bold normal-case	leading-6	  ">
+          My Contracts
+        </h1>
+      </span>
     </Button>,
     <Button
       style={{ borderRadius: "10px" }}
@@ -95,10 +95,13 @@ const BodyDashBoard = () => {
       variant="text"
       onClick={() => handleButtonClick("/dashboard/addContract", "three")}
     >
-      <AppRegistrationIcon
-         
-      ></AppRegistrationIcon>
-      <span className="text-xs font-bold  hidden md:block normal-case	"> Add Contract</span>
+      <AppRegistrationIcon></AppRegistrationIcon>
+      <span className="text-xs font-bold  hidden md:block normal-case	">
+        <h1 className="text-xl	font-bold normal-case	leading-6	  ">
+          {" "}
+          Add Contract
+        </h1>
+      </span>
     </Button>,
     <Button
       style={{ borderRadius: "10px" }}
@@ -116,10 +119,10 @@ const BodyDashBoard = () => {
       variant="text"
       onClick={() => handleButtonClick("/dashboard/Categories", "four")}
     >
-      <CategoryIcon
-         
-      ></CategoryIcon>
-      <span className="text-xs font-bold  hidden md:block normal-case	"> Categories </span>
+      <CategoryIcon></CategoryIcon>
+      <span className="text-xs font-bold  hidden md:block normal-case	">
+        <h1 className="text-xl	font-bold normal-case	leading-6	  ">Categories </h1>
+      </span>
     </Button>,
     <Button
       style={{ borderRadius: "10px" }}
@@ -137,25 +140,27 @@ const BodyDashBoard = () => {
       onClick={() => handleButtonClick("/dashboard/AllContracts", "five")}
     >
       {console.log("pathname MY All Contracts   ::   ", pathname)}
-      <DynamicFormIcon
-     
-      ></DynamicFormIcon>
-      <span className="text-xs font-bold  hidden md:block normal-case	"> All Contracts</span>
+      <DynamicFormIcon></DynamicFormIcon>
+      <span className="text-xs font-bold  hidden md:block normal-case	">
+        <h1 className="text-xl	font-bold normal-case	leading-6	  ">
+          All Contracts
+        </h1>
+      </span>
     </Button>,
     <Button
       style={{ borderRadius: "10px" }}
       key="three"
       sx={{ color: "white", display: "flex", justifyContent: "flex-start" }}
       className="gap-5"
-      variant="text" 
+      variant="text"
       onClick={() => {
         logout("/logout");
       }}
     >
-      <Person3Icon
-        
-      ></Person3Icon>
-      <span className="text-xs font-bold  hidden md:block normal-case	"> Logout</span>
+      <Person3Icon></Person3Icon>
+      <span className="text-xs font-bold  hidden md:block normal-case	">
+        <h1 className="text-xl	font-bold normal-case	leading-6	  ">Logout</h1>
+      </span>
     </Button>,
   ];
 
@@ -171,7 +176,6 @@ const BodyDashBoard = () => {
           orientation="vertical"
           aria-label="vertical outlined button group"
           className="gap-5  justify-start  flex   drwMaxwidth  w-full mx-3	"
- 
           sx={{
             display: "flex",
             flexDirection: ["row", "row", "column"], // Default is "row" for xs, sm, and md screens
