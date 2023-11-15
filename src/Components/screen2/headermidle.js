@@ -1,5 +1,6 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
+
+import { styled, alpha, useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -54,8 +55,18 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Mycontact() {
   return (
-    <div className=" flex justify-end  pr-5  disppt  hidden md:block">
-      <Search sx={{ width: "500px", display: "flex", justifyContent: "end" }}>
+    <div className=" flex justify-end  pr-5  disppt   ">
+      <Search
+        sx={{
+          width: "500px",
+          display: "flex",
+          justifyContent: "end",
+          display: {
+            xs: "none", // Apply this style for extra small screens
+            sm: "flex", // Apply this style for small screens
+          },
+        }}
+      >
         <SearchIconWrapper>
           <SearchIcon />
         </SearchIconWrapper>

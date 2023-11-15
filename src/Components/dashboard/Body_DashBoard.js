@@ -14,7 +14,6 @@ import { useTheme } from "@mui/material/styles";
 
 const BodyDashBoard = () => {
   const theme = useTheme();
-
   const navigate = useNavigate();
   const { pathname } = useLocation();
   // const Contract = useNavigate();

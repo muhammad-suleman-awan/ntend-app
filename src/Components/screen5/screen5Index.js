@@ -11,11 +11,11 @@ import ContractDetail from "./allcontractTable";
 
 const IndexScreen5 = () => {
   return (
-    <div className="col-span-10  bg-[#dedede]     sm:h-96">
-      <div className="bg-white mt-1 h-16 flex  justify-between pt-5 pl-5 pr-5 mb-1">
+    <div className="col-span-10  bg-[#dedede]     sm:h-96 ">
+      <div className="bg-white mt-1 h-16 flex  justify-between pt-5 pl-5 pr-5 md:mb-1 ">
         <span className="text-3xl font-bold	">All Contracts</span>
       </div>
-      <div className=" 		  ">
+      <div className=" ">
         <Mycontact></Mycontact>
         <ContractDetail></ContractDetail>
       </div>

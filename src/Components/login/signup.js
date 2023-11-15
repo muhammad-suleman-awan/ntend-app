@@ -87,14 +87,14 @@ const Signup = () => {
             style={{borderRadius:"10px"}}
             onClick={() => gotoSignUp("/dashboard ")}
           >
-            <span className=" font-light normal-case	">Signin</span>
+            <span className=" font-light normal-case	">Sign In</span>
           </Button>
           <Button
             variant="text"
             className="w-3/12 mt-5 pt-2 border-2 border-red-500"
             onClick={() => goto("/gotoSignUp")}
           >
-            <span className="font-light normal-case	">Signup</span>
+            <span className="font-light normal-case	">Sign Up</span>
           </Button>
         </div>
       </div>

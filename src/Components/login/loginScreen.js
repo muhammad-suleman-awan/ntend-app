@@ -62,14 +62,14 @@ const StartUpLogin = () => {
 
             onClick={() => signinGoto("/dashboard/dashborady1")}
           >
-            <span className=" font-light normal-case	">Sign-in</span>
+            <span className=" font-light normal-case	">Sign In</span>
           </Button>
           <Button
             variant="text"
             className="w-3/12"
             onClick={() => goto("/signUpPage")}
           >
-            <span className="font-light normal-case	">Signup</span>
+            <span className="font-light normal-case	">Sign Up</span>
           </Button>
         </div>
       </div>

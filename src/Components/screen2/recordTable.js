@@ -20,7 +20,7 @@ const columns = [
     hideable: true,
     sortable: false,
     //  fontWeight:"bolder",
-    minWidth: 150,
+    minWidth: 100,
     flex: 1,
     maxWidth: 600,
 
@@ -104,6 +104,8 @@ const columns = [
 
     description: "This column has a value getter and is not sortable.",
     sortable: false,
+    minWidth: 100,
+
     flex: 1,
     renderCell: (params) => <DeleteIcon className=" ml-5" />,
   },
@@ -127,13 +129,13 @@ const rows = [
 
 export default function RecordTabledashboard() {
   return (
-    <div className="mx-auto mt-3 w-full px-5">
-      <div className="flex flex-col   w-88 h-96 sm:w-full bg-white">
+    <div className="mx-auto md:mt-3 w-full px-5 ">
+      <div className="flex  w-88 sm:w-full bg-white">
         <DataGrid
           rows={rows}
           columns={columns}
           disableColumnMenu={true}
-          className="flex overflow-auto w-screen"
+          className="flex  w-screen px-10"
         />
       </div>
     </div>

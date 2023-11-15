@@ -9,13 +9,14 @@ import "sweetalert2/dist/sweetalert2.min.css";
 
 const CategoryScreenIndex = () => {
   return (
-    <div className="col-span-10  bg-[#dedede]">
-      <div className="bg-white mt-1 h-16 flex  justify-between pt-5 pl-5 pr-5 mb-1">
+    <div className="col-span-10  bg-[#dedede]  ">
+      <div className="bg-white mt-1 h-16 flex  justify-between pt-5 pl-5 pr-5 mb-1 ">
         <span className="text-3xl font-bold	">Category</span>
         <Button
           variant="contained"
           className="p-0 mr-10 h-7 w-38"
           sx={{ color: "black" }}
+          style={{ borderRadius: "10px" }}
           onClick={async () => {
             const { value: email } = await Swal.fire({
               showCloseButton: true,
@@ -33,10 +34,10 @@ const CategoryScreenIndex = () => {
             });
           }}
         >
-          <span className="text-white font-bold"> Add </span>
+          <span className="text-white font-bold normal-case	"> Add </span>
         </Button>
       </div>
-      <div className=" ">
+      <div className="">
         <BoptttomRowCard></BoptttomRowCard>
         <WrapPaignation></WrapPaignation>
       </div>

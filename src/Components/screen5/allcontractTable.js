@@ -19,14 +19,14 @@ const columns = [
     sortable: false,
     flex: 1,
     maxWidth: 1250,
-    minWidth: 150,
+    minWidth: 100,
     sx: {
       // ".css-t89xny-MuiDataGrid-columnHeaderTitle": {
       //   fontWeight: "bold",
       // },
     },
-    //  fontWeight:"bolder",
-    headerClassName: "flex justify-center tableContacts font-bold", // Apply Tailwind classes
+    //  fontWeight:"bolder", 
+    headerClassName: "flex justify-center tableContacts font-bold px-5", // Apply Tailwind classes
     // headerStyle: { backgroundColor: "red", color: "white" }, // Apply inline styles
     renderCell: (params) => {
       return (
@@ -39,6 +39,7 @@ const columns = [
     headerName: "Date",
     flex: 1,
     maxWidth: 400,
+    minWidth: 100,
     headerClassName: "tableContacts",
     sortable: false,
     renderCell: (params) => {
@@ -49,7 +50,7 @@ const columns = [
     field: "lastName",
     headerClassName: "tableContacts",
     flex: 1,
-
+    minWidth: 100,
     headerName: " Detail",
     sortable: false,
     renderCell: (params) => {
@@ -102,27 +103,13 @@ const rows = [
 export default function ContractDetail() {
   return (
     <div>
-      <div className="flex justify-center mt-3    overflow-auto ">
-        <div className="bg-white w-full h-96    overflow-auto  flex  ">
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            disableColumnMenu={true}
-            hideFooterPagination
-            pagination={false}
-            hideFooter
+      <div className="flex justify-center md:mt-3    ">
+        <div className="bg-white w-full h-full flex mx-5  px-5 2xl:px-0">
+          <DataGrid rows={rows} columns={columns} disableColumnMenu={true} 
+            rowSelection={false}
           />
         </div>
       </div>
-
-      <Stack spacing={8} className="flex justify-center mt-5">
-        <Pagination
-          count={7}
-          siblingCount={0}
-          color="primary"
-          className="flex justify-center hidden md:block"
-        />
-      </Stack>
     </div>
   );
 }

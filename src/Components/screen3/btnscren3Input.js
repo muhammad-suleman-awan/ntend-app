@@ -95,14 +95,13 @@ const RedditTextField = styled((props) => (
 
 export default function InputbtnScreen3() {
   return (
-    <div className=" flex flex-row   justify-center pt-4 flex-wrap   gap-5 w-12/12">
-      <div className="flex flex-col w-96">
+    <div className=" flex flex-row   justify-center pt-4 flex-wrap   gap-5 w-12/12    mx-5">
+      <div className=" w-96">
         <InputLabel
-          shrink
-          className=" w-screen  "
+          id="demo-simple-select-helper-label w-screen "
           sx={{ display: "flex", justifyContent: "start" }}
         >
-          <span className="tableContacts">Name</span>
+          <span className="font-bold  "> Name</span>
         </InputLabel>
         <TextField
           className="bg-white  w-full "
@@ -120,7 +119,7 @@ export default function InputbtnScreen3() {
           id="demo-simple-select-helper-label w-screen "
           sx={{ display: "flex", justifyContent: "start" }}
         >
-          <span className="font-bold"> Category</span>
+          <span className="font-bold  "> Category</span>
         </InputLabel>
 
         <Select
@@ -141,13 +140,13 @@ export default function InputbtnScreen3() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </div>
-      <div className="flex flex-col w-6/12">
+      <div className="flex flex-col w-full  md:w-9/12 lg:w-6/12 xl:w-3/4	 2xl:w-6/12 ">
         <InputLabel
           shrink
           className=" w-screen  "
           sx={{ display: "flex", justifyContent: "start" }}
         >
-          <span className="tableContacts">Description</span>
+          <span className="tableContacts  ">Description</span>
         </InputLabel>
         <TextField
           className="bg-white  w-full"
@@ -155,17 +154,24 @@ export default function InputbtnScreen3() {
           id="bootstrap-input"
           sx={{
             ".css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
-              padding: "8px", 
-              height:"200px",
-              borderRadius:"15px"
+              padding: "8px",
+              height: "200px",
+              borderRadius: "15px",
             },
           }}
         />
       </div>
-      <div className="flex flex-row gap-5 w-6/12">
-      <Button variant="contained" className="w-2/12"><span className="font-bold">Publish</span></Button>
-      <Button variant="contained" className="w-2/12 " sx={{backgroundColor:"#717c99"}} ><span className="font-bold">Save</span></Button>
-
+      <div className="flex flex-row gap-5 w-6/12   ">
+        <Button variant="contained" style={{ borderRadius: "10px" }}>
+          <span className="font-bold">Publish</span>
+        </Button>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: "#717c99" }}
+          style={{ borderRadius: "10px" }}
+        >
+          <span className="font-bold normal-case	">Save</span>
+        </Button>
       </div>
     </div>
   );

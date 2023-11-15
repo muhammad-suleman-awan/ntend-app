@@ -10,9 +10,7 @@ const Screen3Index = () => {
         <span className="text-3xl font-bold	">Add Contracts</span>
       </div>
       <div id="addContractsinfo">
-        <div>
-          <InputbtnScreen3></InputbtnScreen3>
-        </div>
+        <InputbtnScreen3></InputbtnScreen3>
       </div>
     </div>
   );

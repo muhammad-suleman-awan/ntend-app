@@ -18,9 +18,7 @@ const DrawerBoard = () => {
           <div className="flex  md:gap-2 lg:gap-3  ">
             <Avatar alt="Remy Sharp" src={pic2} className="  " />
 
-            <span
-              className="text-[#4579FF] md:text-base lg:text-2xl xl:text-3xl		 font-normal	decoration-8 leading-9	 place-self-center ft"
-            >
+            <span className="text-[#4579FF] md:text-base lg:text-2xl xl:text-3xl		 font-normal	decoration-8 leading-9	 place-self-center ft">
               NTEND INFO
             </span>
           </div>
