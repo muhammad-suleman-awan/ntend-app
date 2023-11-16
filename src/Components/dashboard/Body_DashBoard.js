@@ -11,7 +11,6 @@ import DynamicFormIcon from "@mui/icons-material/DynamicForm";
 import CategoryIcon from "@mui/icons-material/Category";
 import { useState } from "react";
 import { useTheme } from "@mui/material/styles";
-
 const BodyDashBoard = () => {
   const theme = useTheme();
   const navigate = useNavigate();
@@ -25,49 +24,41 @@ const BodyDashBoard = () => {
   const handleButtonClick = (path, buttonKey) => {
     navigate(path);
     setActiveButton(buttonKey);
+    // {console.log("Hello check buttonKey = ", buttonKey)}
   };
   const buttons = [
     <Button
       variant="text"
       key="one"
-      className="gap-5  "
-      style={{ borderRadius: "10px" }}
-      // className={`gap-5 ${activeButton === "one" ? "bg-red-500" : "bg-blue-400"}`}
+      className="gap-5"
+      style={{ borderRadius: "10px",   backgroundColor:pathname === "/dashboard/dashborady1" ? "#4c75b4" : "transparent", }}
+      onClick={() => handleButtonClick("/dashboard/dashborady1", "one")}
       sx={{
         // border: "2px solid red",
-
         color: "white",
         display: "flex",
-        justifyContent: "flex-start",
-        backgroundColor:
-          pathname === "/dashboard/dashborady1" ? "#4c75b4" : "transparent",
+        justifyContent: "flex-start", 
       }}
-      onClick={() => handleButtonClick("/dashboard/dashborady1", "one")}
     >
-      {/* {console.log(pathname)}  */}
+      {/* {console.log("text.1 = ", pathname)} */}
       <HomeOutlinedIcon></HomeOutlinedIcon>
       <span className="text:xs font-bold hidden md:block">
-        <h1 className="text-xl	font-bold normal-case	leading-6	  ">Dashboard</h1>
+        <h1 className="text-xl	font-bold normal-case	  ">Dashboard</h1>
       </span>
     </Button>,
-
     <Button
       variant="text"
       key="two"
       className="gap-5 rounded-lg"
-      // className={`gap-5 ${activeButton === "two" ? "bg-red-500" : ""}`}
       sx={{
-        // ".css-18ouuxk-MuiButtonGroup-root .MuiButtonGroup-lastButton, .css-18ouuxk-MuiButtonGroup-root .MuiButtonGroup-middleButton":
-        //   { borderRadius: "25px" },
-
         color: "white",
         display: "flex",
-        justifyContent: "flex-start",
-        backgroundColor:
-          pathname === "/dashboard/Contract" ? "#4c75b4" : "transparent",
+        justifyContent: "flex-start"
       }}
       onClick={() => handleButtonClick("/dashboard/Contract", "two")}
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "10px",
+        backgroundColor:
+          pathname === "/dashboard/Contract" ? "#4c75b4" : "transparent", }}
     >
       <TocIcon></TocIcon>
       <span className="text-xs font-bold  hidden md:block normal-case	">
@@ -77,7 +68,9 @@ const BodyDashBoard = () => {
       </span>
     </Button>,
     <Button
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "10px" ,
+        backgroundColor:
+          pathname === "/dashboard/addContract" ? "#4c75b4" : "transparent",}}
       key="three"
       sx={{
         color: "white",
@@ -86,9 +79,7 @@ const BodyDashBoard = () => {
         [theme.breakpoints.up("sm")]: {
           display: "flex",
         }, // Change to "column" for lg and larger screens
-        justifyContent: "flex-start",
-        backgroundColor:
-          pathname === "/dashboard/addContract" ? "#4c75b4" : "transparent",
+        justifyContent: "flex-start"
       }}
       className="gap-5 border-2  "
       variant="text"
@@ -103,16 +94,16 @@ const BodyDashBoard = () => {
       </span>
     </Button>,
     <Button
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "10px",
+        backgroundColor:
+          pathname === "/dashboard/Categories" ? "#4c75b4" : "transparent", }}
       key="four"
       borderRadius="5"
       sx={{
         color: "white",
         display: "flex",
         justifyContent: "flex-start",
-        borderRadius: "10px",
-        backgroundColor:
-          pathname === "/dashboard/Categories" ? "#4c75b4" : "transparent",
+        borderRadius: "10px"
       }}
       className="gap-5"
       variant="text"
@@ -124,21 +115,21 @@ const BodyDashBoard = () => {
       </span>
     </Button>,
     <Button
-      style={{ borderRadius: "10px" }}
+      style={{ borderRadius: "10px",
+        backgroundColor:
+          pathname === "/dashboard/AllContracts" ? "#4c75b4" : "transparent", }}
       key="five"
       sx={{
         color: "white",
         display: "flex",
         justifyContent: "flex-start",
-        borderRadius: "10px",
-        backgroundColor:
-          pathname === "/dashboard/AllContracts" ? "#4c75b4" : "transparent",
+        borderRadius: "10px"
       }}
       className="gap-5"
       variant="text"
       onClick={() => handleButtonClick("/dashboard/AllContracts", "five")}
     >
-      {console.log("pathname MY All Contracts   ::   ", pathname)}
+      {/* {console.log("pathname MY All Contracts   ::   ", pathname)} */}
       <DynamicFormIcon></DynamicFormIcon>
       <span className="text-xs font-bold  hidden md:block normal-case	">
         <h1 className="text-xl	font-bold normal-case	leading-6	  ">
@@ -162,7 +153,6 @@ const BodyDashBoard = () => {
       </span>
     </Button>,
   ];
-
   return (
     <div className=" pt-3">
       <Box
@@ -174,7 +164,8 @@ const BodyDashBoard = () => {
         <ButtonGroup
           orientation="vertical"
           aria-label="vertical outlined button group"
-          className="gap-5  justify-start  flex   drwMaxwidth  w-full mx-3	"
+          // drwMaxwidth
+          className="gap-5  justify-start  flex      w-full mx-3	"
           sx={{
             display: "flex",
             flexDirection: ["row", "row", "column"], // Default is "row" for xs, sm, and md screens
@@ -189,5 +180,4 @@ const BodyDashBoard = () => {
     </div>
   );
 };
-
 export default BodyDashBoard;
