@@ -24,14 +24,16 @@ const BodyDashBoard = () => {
   const handleButtonClick = (path, buttonKey) => {
     navigate(path);
     setActiveButton(buttonKey);
-    // {console.log("Hello check buttonKey = ", buttonKey)}
+      // {console.log("Hello check buttonKey = ", buttonKey)}
   };
   const buttons = [
     <Button
       variant="text"
       key="one"
       className="gap-5"
-      style={{ borderRadius: "10px",   backgroundColor:pathname === "/dashboard/dashborady1" ? "#4c75b4" : "transparent", }}
+      style={{ borderRadius: "10px",   backgroundColor:pathname === "/dashboard/dashborady1" 
+      // || "/dashboard"
+       ? "#4c75b4" : "transparent", }}
       onClick={() => handleButtonClick("/dashboard/dashborady1", "one")}
       sx={{
         // border: "2px solid red",
@@ -40,7 +42,7 @@ const BodyDashBoard = () => {
         justifyContent: "flex-start", 
       }}
     >
-      {/* {console.log("text.1 = ", pathname)} */}
+       {/* {console.log("text.1 = ", pathname)} */}
       <HomeOutlinedIcon></HomeOutlinedIcon>
       <span className="text:xs font-bold hidden md:block">
         <h1 className="text-xl	font-bold normal-case	  ">Dashboard</h1>
@@ -145,7 +147,7 @@ const BodyDashBoard = () => {
       variant="text"
       onClick={() => {
         logout("/logout");
-      }}
+      }}        
     >
       <Person3Icon></Person3Icon>
       <span className="text-xs font-bold  hidden md:block normal-case	">
